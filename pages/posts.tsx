@@ -8,10 +8,12 @@ export default function PostsPage( ) {
 
   return (
     <div>
-      <h1> My posts page  </h1>   
+      <h1> My posts page  </h1>
       {posts.map( post => (
-          <Post key={post.id} post={post} />
+        <div key={post.id}>
+          <Post  post={post} />
+        </div>
       ))}
-    </div> 
+    </div>
     );
 }
