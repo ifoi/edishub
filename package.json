@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "generate": "gqty generate"
   },
   "dependencies": {
     "@faustjs/core": "^0.15.7",
