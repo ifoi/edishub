@@ -1,6 +1,6 @@
 import fetch from "node-fetch";
 
-import {ApolloClient, ApolloLin, InMemoryCache, createHttpLink} from "apollo/client" ;
+import {ApolloClient, ApolloLink, InMemoryCache, /*createHttpLink */ } from "apollo/client" ;
 
 /**
  * Middleware operation
@@ -10,7 +10,14 @@ import {ApolloClient, ApolloLin, InMemoryCache, createHttpLink} from "apollo/cli
 	/**
 	 * If session data exist in local storage, set value as session header.
 	 */
-	const session = ( process.browser ) ?  localStorage.getItem( "woo-session" ) : null;
+	
+    // const session = ( process.browser ) ?  localStorage.getItem( "woo-session" ) : null;
+
+    const hasWindow = () => {
+        return typeof window !== 'undefined';
+      };
+     
+      const session = ( hasWindow ) ?  localStorage.getItem( "woo-session" ) : null;
 
 	if ( session ) {
 		operation.setContext( ( { headers = {} } ) => ( {
