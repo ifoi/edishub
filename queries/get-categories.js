@@ -9,10 +9,10 @@ const GET_CATEGORIES_QUERY = gql`query {
 			id
 			name
 			slug
-			// image {
-			// 	sourceUrl
-			// 	altText
-			// }
+			 image {
+			 	sourceUrl
+			 	altText
+			 }
 		}
 	}
 	

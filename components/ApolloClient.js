@@ -1,6 +1,10 @@
 import fetch from "node-fetch";
 
-import {ApolloClient, ApolloLink, InMemoryCache, /*createHttpLink */ } from "apollo/client" ;
+import {ApolloClient, ApolloLink, InMemoryCache, createHttpLink } from "@apollo/client" ;
+
+const hasWindow = () => {
+	return typeof window !== 'undefined';
+  };
 
 /**
  * Middleware operation
@@ -11,13 +15,11 @@ import {ApolloClient, ApolloLink, InMemoryCache, /*createHttpLink */ } from "apo
 	 * If session data exist in local storage, set value as session header.
 	 */
 	
-    // const session = ( process.browser ) ?  localStorage.getItem( "woo-session" ) : null;
+    const session = ( process.browser ) ?  window.localStorage.getItem( "woo-session" ) : null;
 
-    const hasWindow = () => {
-        return typeof window !== 'undefined';
-      };
+  
      
-      const session = ( hasWindow ) ?  localStorage.getItem( "woo-session" ) : null;
+    //   const session =  hasWindow()  ?  localStorage.getItem( "woo-session" ) : null;
 
 	if ( session ) {
 		operation.setContext( ( { headers = {} } ) => ( {
@@ -75,7 +77,7 @@ export const afterware = new ApolloLink( ( operation, forward ) => {
 // Apollo GraphQL client.
 const client = new ApolloClient({
 	link: middleware.concat( afterware.concat( createHttpLink({
-		uri: `${env.local.NEXT_PUBLIC_WORDPRESS_URL}/graphql`,
+		uri: `${process.env.NEXT_PUBLIC_WORDPRESS_URL}/graphql`,
 		fetch: fetch
 	}) ) ),
 	cache: new InMemoryCache(),
