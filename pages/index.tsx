@@ -5,6 +5,7 @@ import EdisMantra from 'components/EdisMantra'
 import ResourceCard from 'components/ResourceCard'
 import { useQuery } from '@apollo/client'
 import { GET_RESOURCES } from 'graphql/queries'
+import FeaturedSection from 'components/FeaturedSection'
 
 export default function Home() {
   const { loading, error, data } = useQuery(GET_RESOURCES)
@@ -21,7 +22,7 @@ export default function Home() {
       <Jumbotron />
       <EdisMantra />
 
-      <ResourceCard />
+      <FeaturedSection />
     </div>
   )
 }
