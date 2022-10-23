@@ -1,24 +1,26 @@
 import 'faust.config';
 import 'styles/globals.css';
+import 'styles/global.scss';
 import 'bootstrap/dist/css/bootstrap.css';
 
-import type { AppProps /*, AppContext */ } from 'next/app';
-import { FaustProvider } from '@faustjs/next';
-import { client } from 'client';
+import type { AppProps } from 'next/app';
+import { ApolloProvider } from '@apollo/client';
+import { client } from '../graphql/client';
 import Header from 'components/Header';
 import { useEffect } from 'react';
 
+
 function MyApp({ Component, pageProps }: AppProps) {
-  useEffect(()=>{
+  useEffect(() => {
     import("bootstrap/dist/js/bootstrap");
-},[])
+  }, [])
   return (
-    <div className="container">
-      <FaustProvider client={client} pageProps={pageProps}>
+    <>
+      <ApolloProvider client={client}>
         <Header />
         <Component {...pageProps} />
-      </FaustProvider>
-    </div>
+      </ApolloProvider>
+    </>
   );
 }
 
