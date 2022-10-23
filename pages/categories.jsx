@@ -1,4 +1,4 @@
- import Layout from "components/Layout";
+import Layout from "components/Layout";
 import client from 'components/ApolloClient';
 import ParentCategoriesBlock from "components/category/category-block/ParentCategoriesBlock";
 import GET_CATEGORIES_QUERY from "queries/get-categories";
