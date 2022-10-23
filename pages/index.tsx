@@ -1,8 +1,7 @@
 import Jumbotron from 'components/Jumbotron'
 import Head from 'next/head'
-import Image from 'next/image'
-import Link from 'next/link'
-import styles from '../styles/Home.module.css'
+
+import EdisMantra from 'components/EdisMantra'
 import ResourceCard from 'components/ResourceCard'
 import { useQuery } from '@apollo/client'
 import { GET_RESOURCES } from 'graphql/queries'
@@ -20,8 +19,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Jumbotron />
+      <EdisMantra />
 
-      {/* <ResourceCard /> */}
+      <ResourceCard />
     </div>
   )
 }

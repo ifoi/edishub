@@ -1,0 +1,26 @@
+@import './variable.scss';
+
+.container {
+  width: 382px;
+  height: 398px;
+  background: #FFF;
+  // border-color: red;
+}
+
+.title {
+  border-bottom: none;
+  background: #FFF;
+}
+
+.footer {
+  border-top: none;
+  background: #FFF;
+}
+
+.upvotes {
+  color: $special-text-color;
+}
+
+.other {
+  color: #A7A7A7;
+}
