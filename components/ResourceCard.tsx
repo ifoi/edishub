@@ -11,9 +11,11 @@ function ResourceCard() {
         <Card.Title>Introduction to Computer Science</Card.Title>
       </Card.Header>
       <Card.Body>
+      <Card.Img src="images/Rectangle7.png" ></Card.Img>
         <Card.Text>
           Some quick example text to build on the card title and make up the
           bulk of the cards content.
+          
         </Card.Text>
       </Card.Body>
       <Card.Footer className={styles.footer}>

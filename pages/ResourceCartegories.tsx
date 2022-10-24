@@ -66,12 +66,18 @@ export default function ExploreResourcesPage() {
       <SelectYourLevelOfLearning>Select your level of learning</SelectYourLevelOfLearning>
       <SelectTheAppropriateTopicS>Select the appropriate topic(s)</SelectTheAppropriateTopicS>
       <LearnAtYourOwnPace>Learn at your own pace</LearnAtYourOwnPace>
-      <Learning1 src="grida://assets-reservation/images/189:2401" alt="image of Learning1" />
-      <Settings11 src="grida://assets-reservation/images/189:2402" alt="image of Settings11" />
-      <TrendingTopic1
-        src="grida://assets-reservation/images/189:2403"
-        alt="image of TrendingTopic1"
+      <Learning1
+        src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/a6857f51-ba1e-4a83-ac40-0e506b83c963"
+        alt="image of Learning1"
       />
+      <Settings11
+        src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/ec9275e0-8b7b-46dc-ac1d-588a602e3f40"
+        alt="image of Settings11"
+      />
+      <TrendingTopic1
+        src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/68ffe05f-77df-46c2-adc7-b41ecbde05d7"
+        alt="image of TrendingTopic1"
+        />
       <Group39>
         <Rectangle24 />
       </Group39>

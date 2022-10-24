@@ -1,3 +1,4 @@
+import ResourceCard from "components/ResourceCard";
 import styled from "styled-components";
 /**
  * `<ExploreResourcesPage>` ('EXPLORE RESOURCES PAGE')
@@ -63,10 +64,16 @@ export default function ExploreResourcesPage() {
       <SelectYourLevelOfLearning>Select your level of learning</SelectYourLevelOfLearning>
       <SelectTheAppropriateTopicS>Select the appropriate topic(s)</SelectTheAppropriateTopicS>
       <LearnAtYourOwnPace>Learn at your own pace</LearnAtYourOwnPace>
-      <Learning1 src="grida://assets-reservation/images/182:2106" alt="image of Learning1" />
-      <Settings11 src="grida://assets-reservation/images/182:2107" alt="image of Settings11" />
+	  <Learning1
+        src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/a6857f51-ba1e-4a83-ac40-0e506b83c963"
+        alt="image of Learning1"
+      />
+      <Settings11
+        src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/ec9275e0-8b7b-46dc-ac1d-588a602e3f40"
+        alt="image of Settings11"
+      />
       <TrendingTopic1
-        src="grida://assets-reservation/images/182:2108"
+        src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/68ffe05f-77df-46c2-adc7-b41ecbde05d7"
         alt="image of TrendingTopic1"
       />
       <YourResourcePicks>Your Resource Picks</YourResourcePicks>
@@ -83,10 +90,12 @@ export default function ExploreResourcesPage() {
       <Group33>
         <Rectangle24 />
       </Group33>
-      <Rectangle7 src="grida://assets-reservation/images/189:2512" alt="image of Rectangle7" />
-      <Rectangle29 src="grida://assets-reservation/images/189:2691" alt="image of Rectangle29" />
-      <Rectangle28 src="grida://assets-reservation/images/189:2666" alt="image of Rectangle28" />
-      <Rectangle30 src="grida://assets-reservation/images/189:2692" alt="image of Rectangle30" />
+      
+  {/* <ResourceCard /> */}
+DifficultyLevel	  <Rectangle7 src="/images/Rectangle7.png" width=""alt="image of Rectangle7" />
+      <Rectangle29 src="/images/Rectangle7.png" width=""alt="image of Rectangle7" />
+      <Rectangle28 src="/images/Rectangle7.png" width=""alt="image of Rectangle7" />
+      <Rectangle30 src="/images/Rectangle7.png" width=""alt="image of Rectangle7" />
       <IntroductionToComputerScience>
         Introduction to
         <br />
@@ -243,13 +252,13 @@ export default function ExploreResourcesPage() {
       <_200Upvotes_0001>200 Upvotes</_200Upvotes_0001>
       <_200Upvotes_0002>200 Upvotes</_200Upvotes_0002>
       <_200Upvotes_0003>200 Upvotes</_200Upvotes_0003>
-      <Chevron src="grida://assets-reservation/images/189:2569" alt="image of Chevron" />
-      <Chevron_0001 src="grida://assets-reservation/images/189:2685" alt="image of Chevron" />
-      <Chevron_0002 src="grida://assets-reservation/images/189:2729" alt="image of Chevron" />
-      <Vector_0008 src="grida://assets-reservation/images/189:2572" alt="image of Vector" />
-      <Vector_0009 src="grida://assets-reservation/images/189:2730" alt="image of Vector" />
-      <Vector_0010 src="grida://assets-reservation/images/189:2686" alt="image of Vector" />
-      <Vector_0011 src="grida://assets-reservation/images/189:2731" alt="image of Vector" />
+      <Chevron src="/images/chevron.png" alt="image of Chevron" />
+      <Chevron_0001 src="/images/chevron.png" alt="image of Chevron" />
+      <Chevron_0002 src="/images/chevron.png" alt="image of Chevron" />
+      <Vector_0008 src="/images/Vector.png" alt="image of Vector" />
+      <Vector_0009 src="/images/Vector.png" alt="image of Vector" />
+      <Vector_0010 src="/images/Vector.png" alt="image of Vector" />
+      <Vector_0011 src="/images/Vector.png" alt="image of Vector" />
       <Vector_0012 xmlns="http://www.w3.org/2000/svg">
         <path
           fill="black"
@@ -276,17 +285,17 @@ export default function ExploreResourcesPage() {
       
 
 
-	  <Vector_0014 src="grida://assets-reservation/images/189:2760" alt="icon" />
-      <Vector_0015 src="grida://assets-reservation/images/189:2779" alt="icon" />
-      <Vector_0016 src="grida://assets-reservation/images/189:2780" alt="icon" />
-      <Vector_0017 src="grida://assets-reservation/images/189:2777" alt="icon" />
-      <Vector_0018 src="grida://assets-reservation/images/189:2778" alt="icon" />
-      <Vector_0019 src="grida://assets-reservation/images/189:2784" alt="icon" />
-      <Vector_0020 src="grida://assets-reservation/images/189:2792" alt="icon" />
-      <Vector_0021 src="grida://assets-reservation/images/189:2763" alt="icon" />
-      <Vector_0022 src="grida://assets-reservation/images/189:2781" alt="icon" />
-      <Vector_0023 src="grida://assets-reservation/images/189:2766" alt="icon" />
-      <Vector_0024 src="grida://assets-reservation/images/189:2782" alt="icon" />
+	  <Vector_0014 src="/images/Vector.png" alt="icon" />
+      <Vector_0015 src="/images/Vector.png" alt="icon" />
+      <Vector_0016 src="/images/Vector.png" alt="icon" />
+      <Vector_0017 src="/images/Vector.png" alt="icon" />
+      <Vector_0018 src="/images/Vector.png" alt="icon" />
+      <Vector_0019 src="/images/Vector.png" alt="icon" />
+      <Vector_0020 src="/images/Vector.png" alt="icon" />
+      <Vector_0021 src="/images/Vector.png" alt="icon" />
+      <Vector_0022 src="/images/Vector.png" alt="icon" />
+      <Vector_0023 src="/images/Vector.png" alt="icon" />
+      <Vector_0024 src="/images/Vector.png" alt="icon" />
       <Price>Price</Price>
       <DifficultyLevel>Difficulty Level</DifficultyLevel>
       <Free_0004>Free</Free_0004>
@@ -295,7 +304,7 @@ export default function ExploreResourcesPage() {
       <Intermediate>Intermediate</Intermediate>
       <Advanced>Advanced</Advanced>
       <SeeMore>See More</SeeMore>
-      <Vector_0025 src="grida://assets-reservation/images/189:2791" alt="icon" />
+      <Vector_0025 src="/images/CheckedVector.png" alt="icon" />
     </RootWrapperExploreResourcesPage>
   );
 }
