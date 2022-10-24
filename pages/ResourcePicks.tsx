@@ -92,7 +92,7 @@ export default function ExploreResourcesPage() {
       </Group33>
       
   {/* <ResourceCard /> */}
-DifficultyLevel	  <Rectangle7 src="/images/Rectangle7.png" width=""alt="image of Rectangle7" />
+	  <Rectangle7 src="/images/Rectangle7.png" width=""alt="image of Rectangle7" />
       <Rectangle29 src="/images/Rectangle7.png" width=""alt="image of Rectangle7" />
       <Rectangle28 src="/images/Rectangle7.png" width=""alt="image of Rectangle7" />
       <Rectangle30 src="/images/Rectangle7.png" width=""alt="image of Rectangle7" />
