@@ -36,13 +36,16 @@ import styled from "styled-components";
  * <!-- Info: Please do not remove this comment unless intended. removing this section will break grida integrations. -->
  * <!-- grida.meta.widget_declaration | engine : 0.0.1 | source : figma://ccmRe7vzcfeTsD78jd0hHR/149:2150 -->
  */
+
+import Link from "next/link" ;
+
 export default function ExploreResourcesPage() {
   return (
     <RootWrapperExploreResourcesPage>
       <Rectangle26 />
       <Rectangle27 />
-      {/* <LogIn>Log In</LogIn>
-      <SignUp>Sign Up</SignUp> */}
+      <LogIn>Log In</LogIn>
+      <SignUp>Sign Up</SignUp>
       <EdisHub>{"{EdisHub}"}</EdisHub>
       <Group14>
         <Categories>Categories</Categories>
@@ -91,7 +94,9 @@ export default function ExploreResourcesPage() {
       <Advanced>Advanced</Advanced>
       <MaySelectOnlyOne>(may select only one)</MaySelectOnlyOne>
       <Rectangle44 />
-      <Continue>Continue</Continue>
+      <Continue    >
+		 <Link href="/ResourcePicks" > Continue</Link>
+	  </Continue>
       <OrViewAllDevelopmentResources>
         or view all development resources
       </OrViewAllDevelopmentResources>
@@ -110,6 +115,10 @@ export default function ExploreResourcesPage() {
     </RootWrapperExploreResourcesPage>
   );
 }
+
+// const handleContinueClick = () => {
+
+// }
 
 const RootWrapperExploreResourcesPage = styled.div`
 	min-height: 100vh;
