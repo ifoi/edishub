@@ -25,6 +25,7 @@ export default function Home() {
       </Head>
       <Jumbotron />
       <EdisMantra />
+      
       <Container>
       <Button variant="outline-primary">Beginner</Button>{' '}
       <Button variant="outline-primary">Intermidiate</Button>{' '}
