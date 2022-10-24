@@ -1,9 +1,8 @@
-// import React from "react";
 import styled from "styled-components";
 /**
  * `<ExploreResourcesPage>` ('EXPLORE RESOURCES PAGE')
- * - [Open in Figma](https://figma.com/file/ccmRe7vzcfeTsD78jd0hHR?node-id=149:2150)
- * - [Open in Grida](https://code.grida.co/files/ccmRe7vzcfeTsD78jd0hHR?node=149:2150)
+ * - [Open in Figma](https://figma.com/file/ccmRe7vzcfeTsD78jd0hHR?node-id=189:2384)
+ * - [Open in Grida](https://code.grida.co/files/ccmRe7vzcfeTsD78jd0hHR?node=189:2384)
  *
  *
  * ---
@@ -24,7 +23,7 @@ import styled from "styled-components";
  * @params {any} props - this widget does not requires props. you can pass custom dynamic props to the widget as you want (on typescript, it will raise type check issues).
  * ---
  * @preview
- * ![](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/54d97f80-e5a4-483a-bf0a-a0b2ef14b996)
+ * ![](grida://assets-reservation/images/189:2384)
  * ---
  * @remarks
  * @see {@link https://grida.co/docs} for more information.
@@ -34,7 +33,7 @@ import styled from "styled-components";
  *
  * ![Made with Grida](https://bridged-service-static.s3.us-west-1.amazonaws.com/branding/logo/32.png)
  * <!-- Info: Please do not remove this comment unless intended. removing this section will break grida integrations. -->
- * <!-- grida.meta.widget_declaration | engine : 0.0.1 | source : figma://ccmRe7vzcfeTsD78jd0hHR/149:2150 -->
+ * <!-- grida.meta.widget_declaration | engine : 0.0.1 | source : figma://ccmRe7vzcfeTsD78jd0hHR/189:2384 -->
  */
 
 import Link from "next/link" ;
@@ -67,46 +66,64 @@ export default function ExploreResourcesPage() {
       <SelectYourLevelOfLearning>Select your level of learning</SelectYourLevelOfLearning>
       <SelectTheAppropriateTopicS>Select the appropriate topic(s)</SelectTheAppropriateTopicS>
       <LearnAtYourOwnPace>Learn at your own pace</LearnAtYourOwnPace>
-      <Learning1
-        src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/a6857f51-ba1e-4a83-ac40-0e506b83c963"
-        alt="image of Learning1"
-      />
-      <Settings11
-        src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/ec9275e0-8b7b-46dc-ac1d-588a602e3f40"
-        alt="image of Settings11"
-      />
+      <Learning1 src="grida://assets-reservation/images/189:2401" alt="image of Learning1" />
+      <Settings11 src="grida://assets-reservation/images/189:2402" alt="image of Settings11" />
       <TrendingTopic1
-        src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/68ffe05f-77df-46c2-adc7-b41ecbde05d7"
+        src="grida://assets-reservation/images/189:2403"
         alt="image of TrendingTopic1"
       />
-      <SelectYourLevelOfLearning_0001>Select Your Level of Learning</SelectYourLevelOfLearning_0001>
       <Group39>
         <Rectangle24 />
       </Group39>
+      <Group43>
+        <Rectangle24_0001 />
+      </Group43>
       <Group40>
-        <Rectangle24 />
+        <Rectangle24_0001 />
       </Group40>
+      <Group44>
+        <Rectangle24_0001 />
+      </Group44>
       <Group41>
-        <Rectangle24 />
+        <Rectangle24_0001 />
       </Group41>
-      <Beginner>Beginner</Beginner>
-      <Intermediate>Intermediate</Intermediate>
-      <Advanced>Advanced</Advanced>
-      <MaySelectOnlyOne>(may select only one)</MaySelectOnlyOne>
+      <Group45>
+        <Rectangle24_0001 />
+      </Group45>
+      <Group42>
+        <Rectangle24_0001 />
+      </Group42>
+      <Group46>
+        <Rectangle24_0001 />
+      </Group46>
+      <FundementalsWebDevelopment>
+        Fundamentals
+        <br />
+        Web Development
+      </FundementalsWebDevelopment>
+      <BlahBlah>Blah blah</BlahBlah>
+      <BlahBlah_0001>Blah blah</BlahBlah_0001>
+      <BlahBlah_0002>Blah blah</BlahBlah_0002>
+      <BlahBlah_0003>Blah blah</BlahBlah_0003>
+      <BlahBlah_0004>Blah blah</BlahBlah_0004>
+      <BlahBlah_0005>Blah blah</BlahBlah_0005>
+      <BlahBlah_0006>Blah blah</BlahBlah_0006>
       <Rectangle44 />
-      <Continue    >
-		 <Link href="/ResourceCartegories" >
-		 <a style ={{
+      <Continue> <Link href="/ResourcePicks">
+        <a style ={{
             color:"white",
             textDecoration: "none",
-                  }}>
-					Continue
-			</a> 
-		  </Link>
-	  </Continue>
+        
+          }}>
+            Continue
+         </a>
+         </Link>
+      </Continue>
       <OrViewAllDevelopmentResources>
         or view all development resources
       </OrViewAllDevelopmentResources>
+      <SelectYourResourceCategories>Select Your Resource Categories</SelectYourResourceCategories>
+      <MaySelectMultiple>(may select multiple)</MaySelectMultiple>
       <Vector xmlns="http://www.w3.org/2000/svg">
         <path
           fill="black"
@@ -122,10 +139,6 @@ export default function ExploreResourcesPage() {
     </RootWrapperExploreResourcesPage>
   );
 }
-
-// const handleContinueClick = () => {
-
-// }
 
 const RootWrapperExploreResourcesPage = styled.div`
 	min-height: 100vh;
@@ -161,7 +174,7 @@ const LogIn = styled.span`
 	font-family: Inter, sans-serif;
 	font-weight: 400;
 	text-align: center;
-	width: 113px;
+	width: 93px;
 	min-height: 37px;
 	position: absolute;
 	left: 1050px;
@@ -176,7 +189,7 @@ const SignUp = styled.span`
 	font-family: Inter, sans-serif;
 	font-weight: 400;
 	text-align: center;
-	width: 135px;
+	width: 95px;
 	min-height: 37px;
 	position: absolute;
 	left: 1190px;
@@ -248,7 +261,7 @@ const SearchForAnything = styled.span`
 	font-family: Inter, sans-serif;
 	font-weight: 400;
 	text-align: left;
-	width: 313px;
+	width: 273px;
 	min-height: 38px;
 	position: absolute;
 	left: 41px;
@@ -272,7 +285,7 @@ const ExploreDevelopmentResources = styled.span`
 	font-family: Inter, sans-serif;
 	font-weight: 700;
 	text-align: left;
-	width: 787px;
+	width: 745px;
 	min-height: 148px;
 	position: absolute;
 	left: 213px;
@@ -332,7 +345,7 @@ const LearnAtYourOwnPace = styled.span`
 	font-family: Inter, sans-serif;
 	font-weight: 500;
 	text-align: center;
-	width: 167px;
+	width: 127px;
 	min-height: 36px;
 	position: absolute;
 	left: 1171px;
@@ -367,32 +380,36 @@ const TrendingTopic1 = styled.img`
 	top: 190px;
 `;
 
-const SelectYourLevelOfLearning_0001 = styled.span`
-	color: black;
-	text-overflow: ellipsis;
-	font-size: 32px;
-	font-family: Inter, sans-serif;
-	font-weight: 700;
-	text-align: left;
-	width: 599px;
-	min-height: 60px;
-	position: absolute;
-	left: 139px;
-	top: 520px;
-	height: 60px;
-`;
-
 const Group39 = styled.div`
-	width: 240px;
-	height: 112px;
+	width: 224px;
+	height: 117px;
 	position: absolute;
-	left: 345px;
+	left: 262px;
 	top: 644px;
 `;
 
 const Rectangle24 = styled.div`
-	width: 240px;
-	height: 112px;
+	width: 224px;
+	height: 117px;
+	box-shadow: 0px 2px 9px -2px rgb(56, 95, 185);
+	background-color: rgb(56, 95, 185);
+	border-radius: 10px;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+`;
+
+const Group43 = styled.div`
+	width: 224px;
+	height: 117px;
+	position: absolute;
+	left: 262px;
+	top: 792px;
+`;
+
+const Rectangle24_0001 = styled.div`
+	width: 224px;
+	height: 117px;
 	box-shadow: 0px 2px 9px -2px rgb(56, 95, 185);
 	background-color: white;
 	border-radius: 10px;
@@ -402,94 +419,185 @@ const Rectangle24 = styled.div`
 `;
 
 const Group40 = styled.div`
-	width: 240px;
-	height: 112px;
+	width: 224px;
+	height: 117px;
 	position: absolute;
-	left: 636px;
+	left: 517px;
 	top: 644px;
+`;
+
+const Group44 = styled.div`
+	width: 224px;
+	height: 117px;
+	position: absolute;
+	left: 517px;
+	top: 792px;
 `;
 
 const Group41 = styled.div`
-	width: 240px;
-	height: 112px;
+	width: 224px;
+	height: 117px;
 	position: absolute;
-	left: 927px;
+	left: 775px;
 	top: 644px;
 `;
 
-const Beginner = styled.span`
-	color: Black;
-	background-color: blue-btn ;
+const Group45 = styled.div`
+	width: 224px;
+	height: 117px;
+	position: absolute;
+	left: 775px;
+	top: 792px;
+`;
+
+const Group42 = styled.div`
+	width: 224px;
+	height: 117px;
+	position: absolute;
+	left: 1029px;
+	top: 644px;
+`;
+
+const Group46 = styled.div`
+	width: 224px;
+	height: 117px;
+	position: absolute;
+	left: 1029px;
+	top: 792px;
+`;
+
+const FundementalsWebDevelopment = styled.span`
+	color: white;
 	text-overflow: ellipsis;
-	font-size: 24px;
+	font-size: 18px;
 	font-family: Inter, sans-serif;
 	font-weight: 500;
 	text-align: center;
-	width: 270px;
-	min-height: 36px;
+	width: 235px;
+	min-height: 49px;
 	position: absolute;
-	left: 330px;
-	top: 682px;
-	height: 36px;
+	left: 258px;
+	top: 678px;
+	height: 49px;
 `;
 
-const Intermediate = styled.span`
-	color: black;
-	text-overflow: ellipsis;
-	font-size: 24px;
-	font-family: Inter, sans-serif;
-	font-weight: 500;
-	text-align: center;
-	width: 270px;
-	min-height: 36px;
-	position: absolute;
-	left: 621px;
-	top: 682px;
-	height: 36px;
-`;
-
-const Advanced = styled.span`
-	color: black;
-	text-overflow: ellipsis;
-	font-size: 24px;
-	font-family: Inter, sans-serif;
-	font-weight: 500;
-	text-align: center;
-	width: 270px;
-	min-height: 36px;
-	position: absolute;
-	left: 912px;
-	top: 682px;
-	height: 36px;
-`;
-
-const MaySelectOnlyOne = styled.span`
+const BlahBlah = styled.span`
 	color: black;
 	text-overflow: ellipsis;
 	font-size: 18px;
 	font-family: Inter, sans-serif;
-	font-weight: 400;
-	text-align: left;
-	width: 314px;
-	min-height: 36px;
+	font-weight: 500;
+	text-align: center;
+	width: 235px;
+	min-height: 49px;
 	position: absolute;
-	left: 139px;
-	top: 572px;
-	height: 36px;
+	left: 513px;
+	top: 678px;
+	height: 49px;
+`;
+
+const BlahBlah_0001 = styled.span`
+	color: black;
+	text-overflow: ellipsis;
+	font-size: 18px;
+	font-family: Inter, sans-serif;
+	font-weight: 500;
+	text-align: center;
+	width: 235px;
+	min-height: 49px;
+	position: absolute;
+	left: 513px;
+	top: 826px;
+	height: 49px;
+`;
+
+const BlahBlah_0002 = styled.span`
+	color: black;
+	text-overflow: ellipsis;
+	font-size: 18px;
+	font-family: Inter, sans-serif;
+	font-weight: 500;
+	text-align: center;
+	width: 235px;
+	min-height: 49px;
+	position: absolute;
+	left: 258px;
+	top: 826px;
+	height: 49px;
+`;
+
+const BlahBlah_0003 = styled.span`
+	color: black;
+	text-overflow: ellipsis;
+	font-size: 18px;
+	font-family: Inter, sans-serif;
+	font-weight: 500;
+	text-align: center;
+	width: 235px;
+	min-height: 49px;
+	position: absolute;
+	left: 771px;
+	top: 678px;
+	height: 49px;
+`;
+
+const BlahBlah_0004 = styled.span`
+	color: black;
+	text-overflow: ellipsis;
+	font-size: 18px;
+	font-family: Inter, sans-serif;
+	font-weight: 500;
+	text-align: center;
+	width: 235px;
+	min-height: 49px;
+	position: absolute;
+	left: 771px;
+	top: 826px;
+	height: 49px;
+`;
+
+const BlahBlah_0005 = styled.span`
+	color: black;
+	text-overflow: ellipsis;
+	font-size: 18px;
+	font-family: Inter, sans-serif;
+	font-weight: 500;
+	text-align: center;
+	width: 177px;
+	min-height: 49px;
+	position: absolute;
+	left: 1053px;
+	top: 678px;
+	height: 49px;
+`;
+
+const BlahBlah_0006 = styled.span`
+	color: black;
+	text-overflow: ellipsis;
+	font-size: 18px;
+	font-family: Inter, sans-serif;
+	font-weight: 500;
+	text-align: center;
+	width: 177px;
+	min-height: 49px;
+	position: absolute;
+	left: 1053px;
+	top: 826px;
+	height: 49px;
 `;
 
 const Rectangle44 = styled.div`
 	width: 500px;
 	height: 65px;
-	background-color: rgba(56, 95, 185, 0.5);
+	background-color: rgb(56, 95, 185);
 	border-radius: 10px;
 	position: absolute;
 	left: 506px;
-	top: 805px;
+	top: 982px;
 `;
 
 const Continue = styled.span`
-	color: rgba(255, 255, 255, 0.5);
+	color: white;
 	text-overflow: ellipsis;
 	font-size: 18px;
 	font-family: Inter, sans-serif;
@@ -499,7 +607,7 @@ const Continue = styled.span`
 	min-height: 36px;
 	position: absolute;
 	left: 621px;
-	top: 820px;
+	top: 997px;
 	height: 36px;
 `;
 
@@ -514,7 +622,37 @@ const OrViewAllDevelopmentResources = styled.span`
 	min-height: 36px;
 	position: absolute;
 	left: 618px;
-	top: 882px;
+	top: 1059px;
+	height: 36px;
+`;
+
+const SelectYourResourceCategories = styled.span`
+	color: black;
+	text-overflow: ellipsis;
+	font-size: 32px;
+	font-family: Inter, sans-serif;
+	font-weight: 700;
+	text-align: left;
+	width: 553px;
+	min-height: 60px;
+	position: absolute;
+	left: 139px;
+	top: 520px;
+	height: 60px;
+`;
+
+const MaySelectMultiple = styled.span`
+	color: black;
+	text-overflow: ellipsis;
+	font-size: 18px;
+	font-family: Inter, sans-serif;
+	font-weight: 400;
+	text-align: left;
+	width: 274px;
+	min-height: 36px;
+	position: absolute;
+	left: 139px;
+	top: 572px;
 	height: 36px;
 `;
 
@@ -525,7 +663,7 @@ const Vector = styled.svg`
 	left: 494px;
 	top: 64px;
 	right: 1005px;
-	bottom: 910px;
+	bottom: 1080px;
 `;
 
 const Vector_0001 = styled.svg`
@@ -535,5 +673,5 @@ const Vector_0001 = styled.svg`
 	left: 547px;
 	top: 59px;
 	right: 946px;
-	bottom: 903px;
+	bottom: 1073px;
 `;

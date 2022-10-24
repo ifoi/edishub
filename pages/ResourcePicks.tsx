@@ -264,14 +264,19 @@ export default function ExploreResourcesPage() {
       </Vector_0013>
       <Categories_0001>Categories</Categories_0001>
       <SortBy>Sort By</SortBy>
-      <FundementalsOfWebDev>Fundementals of Web Dev</FundementalsOfWebDev>
-      <FundementalsOfWebDev_0001>Fundementals of Web Dev</FundementalsOfWebDev_0001>
-      <FundementalsOfWebDev_0002>Fundementals of Web Dev</FundementalsOfWebDev_0002>
-      <FundementalsOfWebDev_0003>Fundementals of Web Dev</FundementalsOfWebDev_0003>
-      <FundementalsOfWebDev_0004>Fundementals of Web Dev</FundementalsOfWebDev_0004>
-      <FundementalsOfWebDev_0005>Fundementals of Web Dev</FundementalsOfWebDev_0005>
-      <FundementalsOfWebDev_0006>Fundementals of Web Dev</FundementalsOfWebDev_0006>
-      <Vector_0014 src="grida://assets-reservation/images/189:2760" alt="icon" />
+     
+	 
+	  <FundementalsOfWebDev>Fundamentals of Web Dev</FundementalsOfWebDev> 
+      <FundementalsOfWebDev_0001>Fundamentals of Web Dev</FundementalsOfWebDev_0001>
+      <FundementalsOfWebDev_0002>Fundamentals of Web Dev</FundementalsOfWebDev_0002>
+      <FundementalsOfWebDev_0003>Fundamentals of Web Dev</FundementalsOfWebDev_0003>
+      <FundementalsOfWebDev_0004>Fundamentals of Web Dev</FundementalsOfWebDev_0004>
+      <FundementalsOfWebDev_0005>Fundamentals of Web Dev</FundementalsOfWebDev_0005>
+      <FundementalsOfWebDev_0006>Fundamentals of Web Dev</FundementalsOfWebDev_0006>
+      
+
+
+	  <Vector_0014 src="grida://assets-reservation/images/189:2760" alt="icon" />
       <Vector_0015 src="grida://assets-reservation/images/189:2779" alt="icon" />
       <Vector_0016 src="grida://assets-reservation/images/189:2780" alt="icon" />
       <Vector_0017 src="grida://assets-reservation/images/189:2777" alt="icon" />
