@@ -1,11 +1,15 @@
 import Jumbotron from 'components/Jumbotron'
 import Head from 'next/head'
+import styled from 'components-styled'
+
+import Button from 'react-bootstrap/Button'
 
 import EdisMantra from 'components/EdisMantra'
 import ResourceCard from 'components/ResourceCard'
 import { useQuery } from '@apollo/client'
 import { GET_RESOURCES } from 'graphql/queries'
 import FeaturedSection from 'components/FeaturedSection'
+import { Container } from 'react-bootstrap'
 
 export default function Home() {
   const { loading, error, data } = useQuery(GET_RESOURCES)
@@ -21,6 +25,12 @@ export default function Home() {
       </Head>
       <Jumbotron />
       <EdisMantra />
+      
+      <Container>
+      <Button variant="outline-primary">Beginner</Button>{' '}
+      <Button variant="outline-primary">Intermidiate</Button>{' '}
+      <Button variant="outline-primary">Advanced</Button>{' '}
+      </Container>
 
       <FeaturedSection />
     </div>

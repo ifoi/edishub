@@ -1,0 +1,23 @@
+@import './variable.scss';
+
+.special-text {
+  color: $special-text-color;
+}
+
+.theme-bg {
+  background: $theme-color;
+}
+
+.blue-btn {
+  background: $special-text-color !important;
+  color: #FFF !important;
+}
+
+.white-btn {
+  background: #FFF !important;
+  color: $special-text-color !important;
+}
+
+.top-section {
+  margin-bottom: 2rem;
+}

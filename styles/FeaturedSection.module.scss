@@ -1,0 +1,8 @@
+@import './variable.scss';
+
+.section {
+  margin: 8rem 0 2rem 0;
+  padding: 1.5rem 0 2.4rem 0;
+  background: $theme-color;
+  background: linear-gradient(0deg, $theme-color 51%, #FFF 90%);
+}
