@@ -7,7 +7,7 @@ import Button from 'react-bootstrap/Button'
 import EdisMantra from 'components/EdisMantra'
 import ResourceCard from 'components/ResourceCard'
 import { useQuery } from '@apollo/client'
-import { GET_RESOURCES } from 'graphql/queries'
+import { GET_RESOURCES } from 'queries/queries'
 import FeaturedSection from 'components/FeaturedSection'
 import { Container } from 'react-bootstrap'
 

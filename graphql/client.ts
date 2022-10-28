@@ -1,6 +1,6 @@
 import { ApolloClient, InMemoryCache } from '@apollo/client'
 
 export const client = new ApolloClient({
-  uri: 'http://localhost:3001/graphql',
+  uri: `${process.env.NEXT_PUBLIC_WORDPRESS_SITE_URL}/graphql`,
   cache: new InMemoryCache(),
 });

@@ -1,11 +1,13 @@
-import Layout from 'src/components/Layout';
+import Layout from 'components/Layout';
 import { useRouter } from 'next/router';
-import client from 'src/components/ApolloClient';
-import AddToCartButton from 'src/components/cart/AddToCartButton';
-import {PRODUCT_BY_SLUG_QUERY, PRODUCT_SLUGS} from 'src/queries/product-by-slug';
+import client from 'components/ApolloClient';
+//import AddToCartButton from 'src/components/cart/AddToCartButton';
+import {PRODUCT_BY_SLUG_QUERY, PRODUCT_SLUGS} from 'queries/product-by-slug';
 import { isEmpty } from 'lodash';
-import GalleryCarousel from "src/components/single-product/gallery-carousel";
-import Price from "src/components/single-product/price";
+import GalleryCarousel from "components/single-product/gallery-carousel";
+//import Price from "components/single-product/price";
+
+import Link from 'next/link';
 
 export default function Product(props) {
 	const { product } = props;
@@ -17,6 +19,12 @@ export default function Product(props) {
     if (router.isFallback) {
         return <div>Loading...</div>
     }
+     
+    const resourceURL = !isEmpty (product?.ExternalProduct?.externalURL) ? 
+                           <Link href= {product?.ExternalProduct?.externalURL } > {product?.name} </Link>
+                            : "no url provided" ;
+                      
+     
 
 	return (
 		<Layout>
@@ -46,9 +54,12 @@ export default function Product(props) {
 								} }
 								className="product-description mb-5"
 							/>
-                            <Price salesPrice={product?.price} regularPrice={product?.regularPrice}/>
+
+                            {resourceURL} 
+                            {/* <Price salesPrice={product?.price} regularPrice={product?.regularPrice}/>
 							<AddToCartButton product={ product }/>
-						</div>
+						 */}
+                        </div>
 					</div>
 
 				</div>
