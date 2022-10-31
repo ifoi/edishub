@@ -1,8 +1,10 @@
 import Link from 'next/link';
 // import AddToCartButton from 'components/cart/AddToCartButton';
 // import Price from "./single-product/price";
-import Image from "react-bootstrap/Image";
+// import Image from "react-bootstrap/Image";
 import {DEFAULT_PRODUCT_HOME_IMG_URL} from "/constants/urls.js";
+import Image from "next/image" ;
+import { isEmpty } from 'lodash';
 
 const Product = ( props ) => {
 	const { product } = props;
@@ -15,7 +17,7 @@ const Product = ( props ) => {
 
 				<Link href={ `/product/${ product?.slug }`} >
 					<a>
-						<Image
+						{/* <Image
 							className="object-cover bg-gray-100"
 							width="308"
 							height="308"
@@ -23,7 +25,17 @@ const Product = ( props ) => {
 							sourceUrl={ product?.image?.sourceUrl ?? '' }
 							defaultImgUrl={DEFAULT_PRODUCT_HOME_IMG_URL}
 							altText={product?.image?.altText ?? product?.slug}
-						/>
+						/> */}
+					{!isEmpty( product?.image ) ? (
+                                <Image
+                                    src={ product?.image?.sourceUrl }
+                                    alt="Image of resource website"
+                                    width= "308"
+                                    height="230"
+                                    srcSet={ product?.image?.srcSet }
+                                />
+							) : null }
+
 					</a>
 				</Link>
 				<div className="product-info">

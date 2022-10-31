@@ -24,19 +24,24 @@ export default function Product(props) {
 
     const tempUrl = product.externalUrl ;
     const resourceURL = !isEmpty (product?.externalUrl) ?                            
-                        <Link href= {tempUrl } > Test info {product?.name} </Link>
+                        <Link href= {tempUrl } >
+                         <>
+                         Test info {product?.name} 
+                        </>
+                        </Link>
                           : "no url provided" ;
     //}
      
-    console.log("The tempUrl is : " + tempUrl )
-    console.table(product.externalUrl)  // test url 
+    // console.log("The tempUrl is : " + tempUrl )
+    // console.table(product.externalUrl)  // test url 
 
 	return (
 		<Layout>
 			{ product ? (
 				<div className="single-product container mx-auto my-32 px-4 xl:px-0">
 					<div className="grid md:grid-cols-2 gap-4">
-						<div className="product-images">
+						<Link href= {tempUrl} >
+                        <div className="product-images">
 
 							{ !isEmpty( product?.galleryImages?.nodes ) ? (
                                 <GalleryCarousel gallery={product?.galleryImages?.nodes}/>
@@ -49,7 +54,8 @@ export default function Product(props) {
                                     srcSet={ product?.image?.srcSet }
                                 />
 							) : null }
-						</div>
+						</div> 
+                         </Link>
 						<div className="product-info">
 							<h4 className="products-main-title text-2xl uppercase">{ product.name }</h4>
 							<div
@@ -60,7 +66,7 @@ export default function Product(props) {
 								className="product-description mb-5"
 							/>
 
-                            {/* {resourceURL}  */}
+                            {resourceURL} 
                             {/* <Price salesPrice={product?.price} regularPrice={product?.regularPrice}/>
 							<AddToCartButton product={ product }/>
 						 */}
