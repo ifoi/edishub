@@ -7,10 +7,12 @@ import { isEmpty } from 'lodash';
 import GalleryCarousel from "components/single-product/gallery-carousel";
 //import Price from "components/single-product/price";
 
+import Image from "next/image"
 import Link from 'next/link';
 
 export default function Product(props) {
 	const { product } = props;
+    
 
     const router = useRouter()
 
@@ -19,12 +21,15 @@ export default function Product(props) {
     if (router.isFallback) {
         return <div>Loading...</div>
     }
+
+    const tempUrl = product.externalUrl ;
+    const resourceURL = !isEmpty (product?.externalUrl) ?                            
+                        <Link href= {tempUrl } > Test info {product?.name} </Link>
+                          : "no url provided" ;
+    //}
      
-    const resourceURL = !isEmpty (product?.ExternalProduct?.externalURL) ? 
-                           <Link href= {product?.ExternalProduct?.externalURL } > {product?.name} </Link>
-                            : "no url provided" ;
-                      
-     
+    console.log("The tempUrl is : " + tempUrl )
+    console.table(product.externalUrl)  // test url 
 
 	return (
 		<Layout>
@@ -35,12 +40,12 @@ export default function Product(props) {
 
 							{ !isEmpty( product?.galleryImages?.nodes ) ? (
                                 <GalleryCarousel gallery={product?.galleryImages?.nodes}/>
-							) : !isEmpty( product.image ) ? (
-                                <img
+							) : !isEmpty( product?.image ) ? (
+                                <Image
                                     src={ product?.image?.sourceUrl }
-                                    alt="Product Image"
-                                    width="100%"
-                                    height="auto"
+                                    alt="Image of resource website"
+                                    width= "120"
+                                    height="90"
                                     srcSet={ product?.image?.srcSet }
                                 />
 							) : null }
@@ -55,7 +60,7 @@ export default function Product(props) {
 								className="product-description mb-5"
 							/>
 
-                            {resourceURL} 
+                            {/* {resourceURL}  */}
                             {/* <Price salesPrice={product?.price} regularPrice={product?.regularPrice}/>
 							<AddToCartButton product={ product }/>
 						 */}
