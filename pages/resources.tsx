@@ -1,6 +1,6 @@
 import Jumbotron from 'components/Jumbotron'
 import Head from 'next/head'
-import styled from 'components-styled'
+// import styled from 'components-styled'
 
 import Button from 'react-bootstrap/Button'
 
