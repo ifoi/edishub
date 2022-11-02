@@ -7,10 +7,12 @@ import { isEmpty } from 'lodash';
 import GalleryCarousel from "components/single-product/gallery-carousel";
 //import Price from "components/single-product/price";
 
+import Image from "next/image"
 import Link from 'next/link';
 
 export default function Product(props) {
 	const { product } = props;
+    
 
     const router = useRouter()
 
@@ -19,32 +21,41 @@ export default function Product(props) {
     if (router.isFallback) {
         return <div>Loading...</div>
     }
+
+    const tempUrl = product.externalUrl ;
+    const resourceURL = !isEmpty (product?.externalUrl) ?                            
+                        <Link href= {tempUrl } >
+                         <>
+                         Test info {product?.name} 
+                        </>
+                        </Link>
+                          : "no url provided" ;
+    //}
      
-    const resourceURL = !isEmpty (product?.ExternalProduct?.externalURL) ? 
-                           <Link href= {product?.ExternalProduct?.externalURL } > {product?.name} </Link>
-                            : "no url provided" ;
-                      
-     
+    // console.log("The tempUrl is : " + tempUrl )
+    // console.table(product.externalUrl)  // test url 
 
 	return (
 		<Layout>
 			{ product ? (
 				<div className="single-product container mx-auto my-32 px-4 xl:px-0">
 					<div className="grid md:grid-cols-2 gap-4">
-						<div className="product-images">
+						<Link href= {tempUrl} >
+                        <div className="product-images">
 
 							{ !isEmpty( product?.galleryImages?.nodes ) ? (
                                 <GalleryCarousel gallery={product?.galleryImages?.nodes}/>
-							) : !isEmpty( product.image ) ? (
-                                <img
+							) : !isEmpty( product?.image ) ? (
+                                <Image
                                     src={ product?.image?.sourceUrl }
-                                    alt="Product Image"
-                                    width="100%"
-                                    height="auto"
+                                    alt="Image of resource website"
+                                    width= "120"
+                                    height="90"
                                     srcSet={ product?.image?.srcSet }
                                 />
 							) : null }
-						</div>
+						</div> 
+                         </Link>
 						<div className="product-info">
 							<h4 className="products-main-title text-2xl uppercase">{ product.name }</h4>
 							<div

@@ -1,17 +1,22 @@
 import { isEmpty, isArray } from 'lodash';
 import {useState, useRef} from 'react';
+import Image from "next/image" ;
 
 const GalleryCarousel = ({gallery}) => {
 
-    if ( isEmpty(gallery) || ! isArray( gallery ) ) {
-        return null;
-    }
+    // if ( isEmpty(gallery) || ! isArray( gallery ) ) {
+    //     return null;
+    // }
 
     const activeIndexRef = useRef( { activeIndex: 0 } );
     const slideRef = useRef( 0 );
     const [ slide, setSlide ] = useState( 0 );
     const [ restartSlide, setRestartSlide ] = useState( 0 );
     const { activeIndex } = activeIndexRef.current;
+
+    if ( isEmpty(gallery) || ! isArray( gallery ) ) {
+        return null;
+    }
 
     /**
      * Change to next slide.
@@ -53,7 +58,7 @@ const GalleryCarousel = ({gallery}) => {
                         const opacity = ( activeIndex === index || 1 === gallery.length ) ? 'opacity-100' : 'opacity-0';
                         return (
                             <div key={item?.id} className={`${opacity} banner-img-container absolute top-0 left-0`}>
-                                <img
+                                <Image
                                     src={item?.mediaItemUrl} loading="lazy" alt={ item?.altText ? item?.altText : item?.title }
                                 />
                             </div>

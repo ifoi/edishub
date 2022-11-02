@@ -1,6 +1,6 @@
 import { gql } from '@apollo/client'
 
-export default GET_POSTS_BY_TAXONOMY = gql`
+export const GET_POSTS_BY_TAXONOMY = gql`
 query postByTaxonomy{
     posts(
       where: {
