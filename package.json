@@ -1,13 +1,15 @@
 {
   "name": "edishub",
   "version": "0.1.0",
+  "homepage": "https://ifoi.github.io/edishub",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "generate": "gqty generate"
+    "generate": "gqty generate",
+    "deploy": "npm run build && gh-pages -d .next"
   },
   "dependencies": {
     "@apollo/client": "^3.7.0",
