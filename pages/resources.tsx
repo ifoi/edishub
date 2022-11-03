@@ -7,7 +7,7 @@ import Button from 'react-bootstrap/Button'
 import EdisMantra from 'components/EdisMantra'
 import ResourceCard from 'components/ResourceCard'
 import { useQuery } from '@apollo/client'
-import { GET_RESOURCES } from 'queries/queries'
+import { GET_RESOURCES } from 'graphql/queries/resource.queries'
 import FeaturedSection from 'components/FeaturedSection'
 import { Container } from 'react-bootstrap'
 
@@ -25,11 +25,11 @@ export default function Home() {
       </Head>
       <Jumbotron />
       <EdisMantra />
-      
+
       <Container>
-      <Button variant="outline-primary">Beginner</Button>{' '}
-      <Button variant="outline-primary">Intermidiate</Button>{' '}
-      <Button variant="outline-primary">Advanced</Button>{' '}
+        <Button variant="outline-primary">Beginner</Button>{' '}
+        <Button variant="outline-primary">Intermidiate</Button>{' '}
+        <Button variant="outline-primary">Advanced</Button>{' '}
       </Container>
 
       <FeaturedSection />
