@@ -3,10 +3,11 @@ import Link from "next/link"
 import AmicoImg from '../public/amico.png'
 import styles from '../styles/Jumbotron.module.scss'
 
-import{ Overlay, ClickButton, PopupCard} from "styles/Popup" ;
+import { Overlay, ClickButton, PopupCard } from "styles/Popup";
 
 // import {useState} from "react/useState" ;
 import { MouseEvent } from "react";
+import SignUpModal from "./SignUpModal";
 
 interface Props { }
 
@@ -31,13 +32,13 @@ function Jumbotron(props: Props) {
   type Popup = {
     togglePopup: (event: React.MouseEvent<HTMLElement>) => void;
   }
-  
-  const Popup = ({ togglePopup } : Popup) => (
-        <Overlay>
-        <PopupCard>
-          <ClickButton onClick={togglePopup}>Close</ClickButton>
-        </PopupCard>
-      </Overlay>
+
+  const Popup = ({ togglePopup }: Popup) => (
+    <Overlay>
+      <PopupCard>
+        <ClickButton onClick={togglePopup}>Close</ClickButton>
+      </PopupCard>
+    </Overlay>
   );
 
   return (
@@ -50,18 +51,20 @@ function Jumbotron(props: Props) {
           <Link href="/temp_resources">
             <a className="btn blue-btn btn-lg" type="button" rel="norefferer noopener">Explore Resources</a>
           </Link>
-          <Link href="/temp_resources">
+          {/* <Link href="/temp_resources">
             <a className="btn white-btn btn-lg mx-4" type="button" rel="norefferer noopener">View Dashboard</a>
-          </Link>
-         {/* <Popup togglePopup={function (event: MouseEvent<HTMLElement, MouseEvent>): void {
-            throw new Error("Function not implemented.");  
+          </Link> */}
+          <button className="btn white-btn btn-lg mx-4" type="button" data-bs-toggle="modal" data-bs-target="#signupModal">View Dashboard</button>
+          {/* <Popup togglePopup={function (event: MouseEvent<HTMLElement, MouseEvent>): void {
+            throw new Error("Function not implemented.");
                   } } />
-          */} 
+          */}
         </div>
         <div className={styles.imageFormat}>
           <Image src={AmicoImg} alt="amico" />
         </div>
       </div>
+      <SignUpModal />
     </div>
   )
 }
