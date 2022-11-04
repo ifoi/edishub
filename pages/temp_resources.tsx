@@ -37,95 +37,68 @@ import styled from "styled-components";
  * <!-- grida.meta.widget_declaration | engine : 0.0.1 | source : figma://ccmRe7vzcfeTsD78jd0hHR/149:2150 -->
  */
 
-import Link from "next/link" ;
+import Link from "next/link";
 
 export default function ExploreResourcesPage() {
-  return (
-    <RootWrapperExploreResourcesPage>
-      <Rectangle26 />
-      <Rectangle27 />
-      <LogIn>Log In</LogIn>
-      <SignUp>Sign Up</SignUp>
-      <EdisHub>{"{EdisHub}"}</EdisHub>
-      <Group14>
-        <Categories>Categories</Categories>
-      </Group14>
-      <Group27>
-        <Rectangle16 />
-        <SearchForAnything>Search for Anything</SearchForAnything>
-      </Group27>
-      <Rectangle15 />
-      <ExploreDevelopmentResources>
-        Explore Development
-        <br />
-        Resources
-      </ExploreDevelopmentResources>
-      <WhetherYouReAFullTimeStudentBootcampGraduateOrWorkingProfessionalWeVeGotResourcesCuratedForYourNeeds>
-        Whether you’re a full-time student, bootcamp graduate, or working professional, we’ve got
-        resources curated for your needs.
-      </WhetherYouReAFullTimeStudentBootcampGraduateOrWorkingProfessionalWeVeGotResourcesCuratedForYourNeeds>
-      <SelectYourLevelOfLearning>Select your level of learning</SelectYourLevelOfLearning>
-      <SelectTheAppropriateTopicS>Select the appropriate topic(s)</SelectTheAppropriateTopicS>
-      <LearnAtYourOwnPace>Learn at your own pace</LearnAtYourOwnPace>
-      <Learning1
-        src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/a6857f51-ba1e-4a83-ac40-0e506b83c963"
-        alt="image of Learning1"
-      />
-      <Settings11
-        src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/ec9275e0-8b7b-46dc-ac1d-588a602e3f40"
-        alt="image of Settings11"
-      />
-      <TrendingTopic1
-        src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/68ffe05f-77df-46c2-adc7-b41ecbde05d7"
-        alt="image of TrendingTopic1"
-      />
-      <SelectYourLevelOfLearning_0001>Select Your Level of Learning</SelectYourLevelOfLearning_0001>
-      <Group39>
-        <Rectangle24 />
-      </Group39>
-      <Group40>
-        <Rectangle24 />
-      </Group40>
-      <Group41>
-        <Rectangle24 />
-      </Group41>
-      <Beginner>Beginner</Beginner>
-      <Intermediate>Intermediate</Intermediate>
-      <Advanced>Advanced</Advanced>
-      <MaySelectOnlyOne>(may select only one)</MaySelectOnlyOne>
-      <Rectangle44 />
-      <Continue    >
-		 <Link href="/ResourceCartegories" >
-		 <a style ={{
-            color:"white",
-            textDecoration: "none",
-                  }}>
-					Continue
-			</a> 
-		  </Link>
-	  </Continue>
-      <OrViewAllDevelopmentResources>
-        or view all development resources
-      </OrViewAllDevelopmentResources>
-      <Vector xmlns="http://www.w3.org/2000/svg">
-        <path
-          fill="black"
-          d="M1.5275 0L6.5 5.11123L11.4725 0L13 1.57354L6.5 8.26947L0 1.57354L1.5275 0Z"
-        />
-      </Vector>
-      <Vector_0001 xmlns="http://www.w3.org/2000/svg">
-        <path
-          fill="rgb(167, 167, 167)"
-          d="M13.5792 12.3522L12.721 12.3522L12.4168 12.049C13.4814 10.7689 14.1224 9.10694 14.1224 7.29903C14.1224 3.26772 10.9611 0 7.06118 0C3.16124 0 0 3.26772 0 7.29903C0 11.3303 3.16124 14.5981 7.06118 14.5981C8.81018 14.5981 10.418 13.9355 11.6564 12.8351L11.9497 13.1495L11.9497 14.0366L17.3814 19.64L19 17.9668L13.5792 12.3522L13.5792 12.3522ZM7.06118 12.3522C4.3562 12.3522 2.17267 10.0951 2.17267 7.29903C2.17267 4.50294 4.3562 2.24585 7.06118 2.24585C9.76615 2.24585 11.9497 4.50294 11.9497 7.29903C11.9497 10.0951 9.76615 12.3522 7.06118 12.3522Z"
-        />
-      </Vector_0001>
-    </RootWrapperExploreResourcesPage>
-  );
+	return (
+		<RootWrapperExploreResourcesPage>
+			<Rectangle15>
+				<ExploreDevelopmentResources>
+					Explore Development
+					<br />
+					Resources
+				</ExploreDevelopmentResources>
+				<WhetherYouReAFullTimeStudentBootcampGraduateOrWorkingProfessionalWeVeGotResourcesCuratedForYourNeeds>
+					Whether you’re a full-time student, bootcamp graduate, or working professional, we’ve got
+					resources curated for your needs.
+				</WhetherYouReAFullTimeStudentBootcampGraduateOrWorkingProfessionalWeVeGotResourcesCuratedForYourNeeds>
+				<SelectYourLevelOfLearning>Select your level of learning</SelectYourLevelOfLearning>
+				<SelectTheAppropriateTopicS>Select the appropriate topic(s)</SelectTheAppropriateTopicS>
+				<LearnAtYourOwnPace>Learn at your own pace</LearnAtYourOwnPace>
+				<Learning1
+					src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/a6857f51-ba1e-4a83-ac40-0e506b83c963"
+					alt="image of Learning1"
+				/>
+				<Settings11
+					src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/ec9275e0-8b7b-46dc-ac1d-588a602e3f40"
+					alt="image of Settings11"
+				/>
+				<TrendingTopic1
+					src="https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/68ffe05f-77df-46c2-adc7-b41ecbde05d7"
+					alt="image of TrendingTopic1"
+				/>
+			</Rectangle15>
+			<SelectYourLevelOfLearning_0001>Select Your Level of Learning</SelectYourLevelOfLearning_0001>
+			<Group39>
+				<Rectangle24 />
+			</Group39>
+			<Group40>
+				<Rectangle24 />
+			</Group40>
+			<Group41>
+				<Rectangle24 />
+			</Group41>
+			<Beginner>Beginner</Beginner>
+			<Intermediate>Intermediate</Intermediate>
+			<Advanced>Advanced</Advanced>
+			<MaySelectOnlyOne>(may select only one)</MaySelectOnlyOne>
+			<Rectangle44 />
+			<Continue    >
+				<Link href="/ResourceCartegories" >
+					<a style={{
+						color: "white",
+						textDecoration: "none",
+					}}>
+						Continue
+					</a>
+				</Link>
+			</Continue>
+			<OrViewAllDevelopmentResources>
+				or view all development resources
+			</OrViewAllDevelopmentResources>
+		</RootWrapperExploreResourcesPage>
+	);
 }
-
-// const handleContinueClick = () => {
-
-// }
 
 const RootWrapperExploreResourcesPage = styled.div`
 	min-height: 100vh;
@@ -262,7 +235,7 @@ const Rectangle15 = styled.div`
 	background-color: rgba(56, 95, 185, 0.17);
 	position: absolute;
 	left: 0px;
-	top: 128px;
+	top: -25px;
 `;
 
 const ExploreDevelopmentResources = styled.span`
@@ -276,7 +249,7 @@ const ExploreDevelopmentResources = styled.span`
 	min-height: 148px;
 	position: absolute;
 	left: 213px;
-	top: 160px;
+	top: 45px;
 	height: 148px;
 `;
 
@@ -291,7 +264,7 @@ const WhetherYouReAFullTimeStudentBootcampGraduateOrWorkingProfessionalWeVeGotRe
 	min-height: 36px;
 	position: absolute;
 	left: 213px;
-	top: 323px;
+	top: 185px;
 	height: 36px;
 `;
 
@@ -306,7 +279,7 @@ const SelectYourLevelOfLearning = styled.span`
 	min-height: 36px;
 	position: absolute;
 	left: 791px;
-	top: 323px;
+	top: 235px;
 	height: 36px;
 `;
 
@@ -321,7 +294,7 @@ const SelectTheAppropriateTopicS = styled.span`
 	min-height: 36px;
 	position: absolute;
 	left: 965px;
-	top: 323px;
+	top: 235px;
 	height: 36px;
 `;
 
@@ -336,7 +309,7 @@ const LearnAtYourOwnPace = styled.span`
 	min-height: 36px;
 	position: absolute;
 	left: 1171px;
-	top: 323px;
+	top: 235px;
 	height: 36px;
 `;
 
@@ -346,7 +319,7 @@ const Learning1 = styled.img`
 	object-fit: cover;
 	position: absolute;
 	left: 1178px;
-	top: 190px;
+	top: 120px;
 `;
 
 const Settings11 = styled.img`
@@ -355,7 +328,7 @@ const Settings11 = styled.img`
 	object-fit: cover;
 	position: absolute;
 	left: 812px;
-	top: 190px;
+	top: 120px;
 `;
 
 const TrendingTopic1 = styled.img`
@@ -364,7 +337,7 @@ const TrendingTopic1 = styled.img`
 	object-fit: cover;
 	position: absolute;
 	left: 1002px;
-	top: 190px;
+	top: 120px;
 `;
 
 const SelectYourLevelOfLearning_0001 = styled.span`
