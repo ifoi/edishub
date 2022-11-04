@@ -1,7 +1,6 @@
+import Image from "next/image"
 import Link from "next/link"
-import styled from "styled-components"
-
-import { EdisHub, Group14, Categories, Group27, Rectangle16, SearchForAnything, Vector } from "./styles"
+import { BiBell } from "react-icons/bi"
 
 
 interface Props { }
@@ -11,46 +10,57 @@ function Header(props: Props) {
 
   return (
     <div className="container">
-      <header className="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+      <header className="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 border-bottom">
+        <Link href='/'>
+          <a className="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">&#123; EdisHub &#125;</a>
+        </Link>
 
-        <EdisHub >
-          <Link href="/" className="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
-            <h2>Edis Hub</h2>
-          </Link>
-
-        </EdisHub >
-        {/* <EdisHub>
-          <Link href="/">  EdisHub
-          </Link>
-
-          </EdisHub> */}
-
-
-
-        <Group14>
-          <Categories>Categories</Categories>
-        </Group14>
-
-        <Group27>
-          <Rectangle16 />
-          <SearchForAnything>Search for Anything</SearchForAnything>
-        </Group27>
-
-        <ul className="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-          <li><a href="#" className="nav-link px-2 link-secondary">Home</a></li>
-          {/* <li><a href="#" className="nav-link px-2 link-dark">Features</a></li>
-        <li><a href="#" className="nav-link px-2 link-dark">Pricing</a></li> */}
-          <li><a href="#" className="nav-link px-2 link-dark">FAQs</a></li>
-          <li><a href="#" className="nav-link px-2 link-dark">About</a></li>
-        </ul>
+        <nav className="navbar navbar-expand-lg">
+          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarNavDarkDropdown">
+            <ul className="navbar-nav">
+              <li className="nav-item dropdown">
+                <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Categories
+                </a>
+                <ul className="dropdown-menu dropdown-menu-dark">
+                  <li><a className="dropdown-item" href="#">Action</a></li>
+                  <li><a className="dropdown-item" href="#">Another action</a></li>
+                  <li><a className="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form className=" me-3" role="search">
+              <input type="search" className="form-control" placeholder="Search for anything" aria-label="Search" />
+            </form>
+          </div>
+        </nav>
 
         <div className="col-md-3 text-end">
-          <Link href="/login">
-            <a className="btn btn-outline-primary me-2">
-              Login
-            </a>
-          </Link>
-          <button type="button" className="btn btn-primary">Sign-up</button>
+          <div className="dropdown text-end">
+            <div className="row">
+              <div className="col-md-6">
+                <div>Resource Hub
+
+                  <BiBell />
+                </div>
+              </div>
+              <div className="col-md-6">
+                <a href="#" className="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" className="rounded-circle" />
+                </a>
+                <ul className="dropdown-menu text-small">
+                  <li><a className="dropdown-item" href="#">New project...</a></li>
+                  <li><a className="dropdown-item" href="#">Settings</a></li>
+                  <li><a className="dropdown-item" href="#">Profile</a></li>
+                  <li><hr className="dropdown-divider" /></li>
+                  <li><a className="dropdown-item" href="#">Sign out</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </header>
     </div>
