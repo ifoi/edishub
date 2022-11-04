@@ -235,7 +235,7 @@ const Rectangle15 = styled.div`
 	background-color: rgba(56, 95, 185, 0.17);
 	position: absolute;
 	left: 0px;
-	top: -25px;
+	top: -1px;
 `;
 
 const ExploreDevelopmentResources = styled.span`

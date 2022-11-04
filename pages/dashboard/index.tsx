@@ -1,6 +1,8 @@
+import DashboardNav from 'components/DashboardNav'
 import Usercard from 'components/Usercard'
+import Link from 'next/link'
 import React from 'react'
-import Header from '../components/Header'
+import Header from '../../components/Header'
 interface Props { }
 
 function Dashboard(props: Props) {
@@ -8,7 +10,7 @@ function Dashboard(props: Props) {
 
   return (
     <>
-      <Usercard />
+      <DashboardNav />
     </>
   )
 }
