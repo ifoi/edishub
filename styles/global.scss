@@ -21,3 +21,16 @@
 .top-section {
   margin-bottom: 2rem;
 }
+
+.dashboard-link {
+  color: gray;
+
+  &:hover {
+    color: gray;
+  }
+}
+
+.active {
+  padding-bottom: 2px;
+  border-bottom: 2px solid gray;
+}
