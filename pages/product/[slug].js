@@ -2,7 +2,7 @@ import Layout from 'components/Layout';
 import { useRouter } from 'next/router';
 import client from 'components/ApolloClient';
 //import AddToCartButton from 'src/components/cart/AddToCartButton';
-import {PRODUCT_BY_SLUG_QUERY, PRODUCT_SLUGS} from 'queries/product-by-slug';
+import {PRODUCT_BY_SLUG_QUERY, PRODUCT_SLUGS} from '/graphql/queries/post.queries';
 import { isEmpty } from 'lodash';
 import GalleryCarousel from "components/single-product/gallery-carousel";
 //import Price from "components/single-product/price";
