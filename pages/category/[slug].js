@@ -1,7 +1,7 @@
 import Layout from "components/Layout";
 import client from "components/ApolloClient";
 import Product from "components/Product";
-import {PRODUCT_BY_CATEGORY_SLUG, PRODUCT_CATEGORIES_SLUGS} from "queries/product-by-category";
+import {PRODUCT_BY_CATEGORY_SLUG, PRODUCT_CATEGORIES_SLUGS} from "graphql/queries/category.queries";
 import {isEmpty} from "lodash";
 import {useRouter} from "next/router";
 
