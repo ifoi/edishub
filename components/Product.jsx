@@ -5,6 +5,7 @@ import Link from 'next/link';
 import {DEFAULT_PRODUCT_HOME_IMG_URL} from "/constants/urls.js";
 import Image from "next/image" ;
 import { isEmpty } from 'lodash';
+import AddToCollectionsBtn from './collections/AddToCollectionsBtn';
 
 const Product = ( props ) => {
 	const { product } = props;
@@ -45,6 +46,8 @@ const Product = ( props ) => {
 					<div className="product-description text-sm text-gray-700" dangerouslySetInnerHTML={{ __html: (product?.description)}}/>
 					{/* <Price salesPrice={product?.price} regularPrice={product?.regularPrice}/>
 					<AddToCartButton product={ product }/> */}
+
+					<AddToCollectionsBtn />
 				</div>
 
 			</div>

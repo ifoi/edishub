@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 import { BiPencil } from 'react-icons/bi'
 
@@ -12,7 +13,7 @@ function Usercard(props: Props) {
         <div className="col-md-6">
           <div className="row">
             <div className="col-md-6">
-              <img src="https://github.com/mdo.png" alt="img" className='rounded-circle' width="200" />
+              <Image src="https://github.com/mdo.png" alt="img" className='rounded-circle' width="200" height="200" />
             </div>
             <div className="col-md-6">
               <h2>User name</h2>
