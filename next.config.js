@@ -13,7 +13,8 @@ const nextConfig = {
   //   ],
   // },
   images: {
-    domains: [(`${process.env.NEXT_PUBLIC_WORDPRESS_URL}`).slice(8)],
+    domains: [(`${process.env.NEXT_PUBLIC_WORDPRESS_URL}`).slice(8),
+              "github.com"],
   },
 }
 
