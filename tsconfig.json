@@ -24,7 +24,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "components/collections/CollectionItemsContainer.js"  ],
   "exclude": [
     "node_modules"
   ]
