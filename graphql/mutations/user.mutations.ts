@@ -19,13 +19,13 @@ export const LOG_OUT_USER = gql`
 `
 
 export const REGISTER_USER = gql`
-  mutation RegisterUser($email: String, $username: String!, $password:String!, $firstName: String!, $lastname: String!) {
+  mutation RegisterUser($email: String, $username: String!, $password:String!, $firstName: String!, $lastName: String!) {
   registerUser(input: {
     email: $email,
     username: $username,
     password: $password,
     firstName: $firstName,
-    lastName: $lastname
+    lastName: $lastName
   }) {
     user {
       email

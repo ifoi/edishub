@@ -1,12 +1,16 @@
 import Link from "next/link"
 import { useState } from "react";
 import { BiBell } from "react-icons/bi"
+import LoginModal from "./Login";
+import SignUpModal from "./signupScreens/SignUpModal";
 
 function Header() {
   const [isLoggedIn, setisLoggedIn] = useState(false);
+  const [show, setShow] = useState(false);
 
   return (
     <div className="container">
+      <LoginModal show={show} setShow={setShow} />
       <header className="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 border-bottom">
         <Link href='/'>
           <a className="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">&#123; EdisHub &#125;</a>
@@ -57,7 +61,11 @@ function Header() {
                 </ul>
               </div>
             </div>) : <div>
-              <button type="button" className="btn btn-outline-primary mx-4">Log In</button>
+              <button
+                type="button"
+                className="btn btn-outline-primary mx-4"
+                onClick={() => setShow(true)}
+              >Log In</button>
               <button type="button" className="btn btn-primary">Sign Up</button>
             </div>
             }

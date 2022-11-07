@@ -1,3 +1,4 @@
+import AuthContent from 'components/AuthContent'
 import DashboardNav from 'components/DashboardNav'
 import Usercard from 'components/Usercard'
 import Link from 'next/link'
@@ -10,7 +11,9 @@ function Dashboard(props: Props) {
 
   return (
     <>
-      <DashboardNav />
+      <AuthContent>
+        <DashboardNav />
+      </AuthContent>
     </>
   )
 }

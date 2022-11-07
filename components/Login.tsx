@@ -1,44 +1,48 @@
 import Link from 'next/link'
-import React, { Dispatch, SetStateAction, useState } from 'react'
+import React, { Dispatch, ReactEventHandler, SetStateAction, useState } from 'react'
 import { FcGoogle } from 'react-icons/fc'
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai'
-import { Button, Modal } from 'react-bootstrap'
-import { SignInfoType } from 'components/Jumbotron'
+import { Modal } from 'react-bootstrap'
+import { LOGIN_USER } from 'graphql/mutations/user.mutations'
+import { GET_USER } from 'hooks/useAuth'
 import { useMutation } from '@apollo/client'
-import { REGISTER_USER } from 'graphql/mutations/user.mutations'
+
 interface Props {
   show: boolean
-  singInfo: SignInfoType
   setShow: Dispatch<SetStateAction<boolean>>
-  setShowThree: Dispatch<SetStateAction<boolean>>
-  setSignInfo: Dispatch<SetStateAction<SignInfoType>>
-  // validator: (value: string[]) => boolean
 }
 
-function SignUpModalTwo(props: Props) {
-  const { show, setShow, singInfo, setSignInfo, setShowThree } = props
+function LoginModal(props: Props) {
+  const { show, setShow } = props
 
-  const [registerUser, { loading, error }] = useMutation(REGISTER_USER)
+  const [logIn, { loading, error }] = useMutation(LOGIN_USER, {
+    refetchQueries: [
+      { query: GET_USER }
+    ],
+  });
+
+  const [userCredentials, setUserCredentials] = useState({
+    username: '',
+    password: ''
+  });
 
   const handleChange = (event: any) => {
     const { name, value } = event.target
-    setSignInfo({
-      ...singInfo,
+    setUserCredentials({
+      ...userCredentials,
       [name]: value
     })
   }
 
-  const handleNext = () => {
-    console.log(singInfo)
-    setShow(false)
-    registerUser({
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault()
+    logIn({
       variables: {
-        ...singInfo
+        login: userCredentials.username,
+        password: userCredentials.password
       }
-    }).then(resp => {
-      console.log(resp)
-      setShowThree(true)
     })
+      .then(resp => console.log(resp))
       .catch(err => console.log(err))
   }
 
@@ -48,12 +52,10 @@ function SignUpModalTwo(props: Props) {
         <Modal.Header closeButton style={{ borderBottom: 'none' }}>
         </Modal.Header>
         <Modal.Body>
-          <h3>Sign up to <span className='special-text'>build your hub</span></h3>
+          <h3>Log in to <span className='special-text'>your hub</span></h3>
           <p style={{ fontSize: '0.7rem', marginBottom: '0px' }}>
-            By continuing, you are setting up a EdisHub account
+            Sing in trough...
           </p>
-          <p style={{ fontSize: '0.7rem' }}>and agree to our <span className='special-text'>User Agreement</span> and <span className='special-text'>Privacy Policy</span>.</p>
-
           <div className='text-center'>
             <div className='btn border'>
               <FcGoogle className='w-3' />
@@ -74,51 +76,41 @@ function SignUpModalTwo(props: Props) {
             </svg>
           </div>
 
-          <div>
-            <label htmlFor="username">Username</label>
-            <input
-              type="text"
-              name="username"
-              id="username"
-              className='form-control'
-              onChange={handleChange}
-            />
-          </div>
-
-          <div>
-            <label htmlFor="password">Password</label>
-            <input
-              type="password"
-              name="password"
-              id="password"
-              className='form-control'
-              onChange={handleChange}
-            />
-          </div>
-
-          <div>
-            <input
-              type="button"
-              value="Continue"
-              className='form-control mt-4'
-              style={{ background: '#385FB9', color: '#FFF' }}
-              onClick={handleNext}
-            />
-          </div>
-
-          <div className='mt-4'>
-            <p>Already have an account? <Link href='/login'>
-              <a data-bs-dismiss="modal" aria-label="Close">
-                Log in
-              </a>
-            </Link>
-            </p>
-          </div>
-
+          <form method="POST" onSubmit={handleSubmit}>
+            <div>
+              <label htmlFor="username">Username</label>
+              <input
+                type="text"
+                name="username"
+                id="username"
+                className='form-control'
+                onChange={handleChange}
+              />
+            </div>
+            <div>
+              <label htmlFor="password">Password</label>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                className='form-control'
+                onChange={handleChange}
+              />
+            </div>
+            <div>
+              <input
+                type="submit"
+                value="Continue"
+                className='form-control mt-4'
+                style={{ background: '#385FB9', color: '#FFF' }}
+              // onClick={handleSubmit}
+              />
+            </div>
+          </form>
         </Modal.Body>
       </Modal>
     </>
   );
 }
 
-export default SignUpModalTwo
+export default LoginModal
