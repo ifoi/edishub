@@ -6,7 +6,7 @@ import { v4 } from 'uuid';
 import { AppContext } from "components/context/AppContext";
 import { getFormattedCart } from "functions";
 import GET_CART from "graphql/queries/collection.queries";
-import ADD_TO_CART from "graphql/mutations/collection.mutations";
+import {ADD_TO_CART} from "graphql/mutations/collection.mutations";
 import { useContext, useState } from "react";
 import { useQuery } from "@apollo/client";
 
