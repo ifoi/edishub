@@ -1,12 +1,9 @@
-import Image from "next/image"
 import Link from "next/link"
+import { useState } from "react";
 import { BiBell } from "react-icons/bi"
 
-
-interface Props { }
-
-function Header(props: Props) {
-  const { } = props
+function Header() {
+  const [isLoggedIn, setisLoggedIn] = useState(false);
 
   return (
     <div className="container">
@@ -40,7 +37,7 @@ function Header(props: Props) {
 
         <div className="col-md-3 text-end">
           <div className="dropdown text-end">
-            <div className="row">
+            {!!isLoggedIn ? (<div className="row">
               <div className="col-md-6">
                 <div>Resource Hub
 
@@ -59,28 +56,16 @@ function Header(props: Props) {
                   <li><a className="dropdown-item" href="#">Sign out</a></li>
                 </ul>
               </div>
+            </div>) : <div>
+              <button type="button" className="btn btn-outline-primary mx-4">Log In</button>
+              <button type="button" className="btn btn-primary">Sign Up</button>
             </div>
+            }
           </div>
         </div>
       </header>
     </div>
   )
 }
-
-
-// const EdisHub = styled.span`
-// 	color: rgb(56, 95, 185);
-// 	text-overflow: ellipsis;
-// 	font-size: 32px;
-// 	font-family: "Nova Oval", sans-serif;
-// 	font-weight: 400;
-// 	text-align: left;
-// 	width: 151px;
-// 	min-height: 129px;
-// 	position: absolute;
-// 	left: 219px;
-// 	top: 0px;
-//	height: 129px;
-//`;
 
 export default Header
