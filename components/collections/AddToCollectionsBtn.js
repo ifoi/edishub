@@ -3,8 +3,8 @@ import Button from "react-bootstrap/Button";
 
 import {v4} from 'uuid';
 
-import {AppContext} from "context/AppContext";
-import {getFormattedCart} from "./functions";
+import {AppContext} from "components/context/AppContext";
+import {getFormattedCart} from "functions";
 import GET_CART from "graphql/queries/collection.queries";
 import ADD_TO_CART from "graphql/mutations/collection.mutations";
 
@@ -81,10 +81,10 @@ const AddToCollectionsBtn = (props) => {
         
         </Button>
         {showViewCart ? (
-                <Link href="/collections">
-                    <button>
+                <Link href="/dashboard">
+                    <Button size="sm">
                         View Collections
-                    </button>
+                    </Button>
                 </Link>
             ) : ''}
         
@@ -95,4 +95,5 @@ const AddToCollectionsBtn = (props) => {
 
 }
 
-export default AddToCollectionsBtn ;
+// export default AddToCollectionsBtn ;
+export default AddToCart ;

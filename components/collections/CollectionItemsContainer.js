@@ -1,7 +1,8 @@
 import Link from "next/link";
 import {useContext, useState} from "react";
 import {AppContext} from "components/context/AppContext";
-
+import { getFormattedCart, getUpdatedItems } from "functions";
+import CollectionItem  from "./CollectionItem"
 
 const CollectionItemsContainer = () => {
 
@@ -10,8 +11,11 @@ const CollectionItemsContainer = () => {
     console.warn(cart) ;
 
     return ( 
-        
-        <div> Container for list of collections </div>
+        <div> 
+              
+        <h3> Container for list of collections </h3>  
+     
+       </div> 
     )
 
 
