@@ -1,15 +1,16 @@
-import Image from "next/image"
 import Link from "next/link"
+import { useState } from "react";
 import { BiBell } from "react-icons/bi"
+import LoginModal from "./Login";
+import SignUpModal from "./signupScreens/SignUpModal";
 
-
-interface Props { }
-
-function Header(props: Props) {
-  const { } = props
+function Header() {
+  const [isLoggedIn, setisLoggedIn] = useState(false);
+  const [show, setShow] = useState(false);
 
   return (
     <div className="container">
+      <LoginModal show={show} setShow={setShow} />
       <header className="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 border-bottom">
         <Link href='/'>
           <a className="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">&#123; EdisHub &#125;</a>
@@ -40,7 +41,7 @@ function Header(props: Props) {
 
         <div className="col-md-3 text-end">
           <div className="dropdown text-end">
-            <div className="row">
+            {!!isLoggedIn ? (<div className="row">
               <div className="col-md-6">
                 <div>Resource Hub
 
@@ -59,28 +60,20 @@ function Header(props: Props) {
                   <li><a className="dropdown-item" href="#">Sign out</a></li>
                 </ul>
               </div>
+            </div>) : <div>
+              <button
+                type="button"
+                className="btn btn-outline-primary mx-4"
+                onClick={() => setShow(true)}
+              >Log In</button>
+              <button type="button" className="btn btn-primary">Sign Up</button>
             </div>
+            }
           </div>
         </div>
       </header>
     </div>
   )
 }
-
-
-// const EdisHub = styled.span`
-// 	color: rgb(56, 95, 185);
-// 	text-overflow: ellipsis;
-// 	font-size: 32px;
-// 	font-family: "Nova Oval", sans-serif;
-// 	font-weight: 400;
-// 	text-align: left;
-// 	width: 151px;
-// 	min-height: 129px;
-// 	position: absolute;
-// 	left: 219px;
-// 	top: 0px;
-//	height: 129px;
-//`;
 
 export default Header
