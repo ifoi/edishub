@@ -5,7 +5,7 @@ import {PRODUCT_BY_CATEGORY_SLUG, PRODUCT_CATEGORIES_SLUGS} from "graphql/querie
 import {isEmpty} from "lodash";
 import {useRouter} from "next/router";
 
-export default function CategorySingle( props ) {
+export default function CategorySingle( props: any ) {
 
     const router = useRouter()
 
