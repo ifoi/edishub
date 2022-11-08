@@ -6,16 +6,16 @@ export default function AuthContent({ children }: { children: ReactNode }) {
   const { loggedIn, loading } = useAuth();
   const router = useRouter();
 
-  // Navigate unauthenticated users to Log In page.
-  useEffect(() => {
-    if (!loading && !loggedIn) {
-      router.push('/'); // redirect to Home for now
-    }
-  }, [loggedIn, loading, router]);
+  // // Navigate unauthenticated users to Log In page.
+  // useEffect(() => {
+  //   if (!loading && !loggedIn) {
+  //     router.push('/'); // redirect to Home for now
+  //   }
+  // }, [loggedIn, loading, router]);
 
-  if (loggedIn) {
+  // if (loggedIn) {
     return <>{children}</>;
-  }
+  // }
 
   return <p>Loading...</p>;
 }
