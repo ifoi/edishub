@@ -33,7 +33,7 @@ const Product = ( props ) => {
                                     alt="Image of resource website"
                                     width= "308"
                                     height="230"
-                                    srcSet={ product?.image?.srcSet }
+                                    {/*srcSet={ product?.image?.srcSet } */}
                                 />
 							) : null }
 

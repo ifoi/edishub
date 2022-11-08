@@ -15,6 +15,8 @@ const CollectionItemsContainer = () => {
 
             <h3> Container for list of collections </h3>
 
+            <CollectionItem />
+
         </div>
     )
 
