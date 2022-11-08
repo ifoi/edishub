@@ -1,8 +1,3 @@
-import Link from "next/link";
-import Button from "react-bootstrap/Button";
-
-import { v4 } from 'uuid';
-
 import { AppContext } from "components/context/AppContext";
 import { getFormattedCart } from "functions";
 import GET_CART from "graphql/queries/collection.queries";
@@ -10,17 +5,17 @@ import {ADD_TO_CART} from "graphql/mutations/collection.mutations";
 import { useContext, useState } from "react";
 import { useQuery, useMutation } from "@apollo/client";
 
-const AddToCart = (props: any) => {
+import AddToCart from "./AddToCart"
+
+
+
+const AddToCart = (props) => {
 
     const { product } = props;
 
-    console.log(product)
-
     const productQryInput = {
         clientMutationId: v4(), // Generate a unique id.
-      productId: product.productId,
-    //  productId: 109,
-      
+        productId: product.productId,
     };
 
     const [cart, setCart] = useContext(AppContext);
@@ -39,7 +34,7 @@ const AddToCart = (props: any) => {
             localStorage.setItem('woo-next-cart', JSON.stringify(updatedCart));
 
             // Update cart data in React Context.
-            setCart(updatedCart);
+            // setCart(updatedCart);
         }
     });
 
@@ -67,40 +62,6 @@ const AddToCart = (props: any) => {
         }
     });
 
-    const handleAddToCollectionsBtnClick = async () => {
-
-        // if collection has items, update collection state
-
-        //else create new collection , and push item to collection
-        setRequestError(null);
-        await addToCart();
-    }
-
-    // const AddToCollectionsBtn = (props) => {
-
-        return (
-            <>
-                <Button
-                    disabled={addToCartLoading}
-                    onClick={handleAddToCollectionsBtnClick} size="sm"
-                >
-
-                    {addToCartLoading ? 'Adding to collection..' : "Add to Collections"}
-
-                </Button>
-                {showViewCart ? (
-                    <Link href="/dashboard">
-                        <Button size="sm">
-                            View Collections
-                        </Button>
-                    </Link>
-                ) : ''}
-
-
-            </>
-        )
-    }
-
-
+}
 
 export default AddToCart ;
