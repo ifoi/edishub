@@ -2,12 +2,12 @@ import Link from 'next/link';
 // import AddToCartButton from 'components/cart/AddToCartButton';
 // import Price from "./single-product/price";
 // import Image from "react-bootstrap/Image";
-import {DEFAULT_PRODUCT_HOME_IMG_URL} from "/constants/urls.js";
-import Image from "next/image" ;
+// import {DEFAULT_PRODUCT_HOME_IMG_URL} from "/constants/urls.js";
+import Image from "next/image";
 import { isEmpty } from 'lodash';
 import AddToCollectionsBtn from './collections/AddToCollectionsBtn';
 
-const Product = ( props ) => {
+const Product = (props) => {
 	const { product } = props;
 
 	return (
@@ -16,7 +16,7 @@ const Product = ( props ) => {
 			<div className="product mb-5">
 
 
-				<Link href={ `/product/${ product?.slug }`} >
+				<Link href={`/product/${product?.slug}`} >
 					<a>
 						{/* <Image
 							className="object-cover bg-gray-100"
@@ -27,27 +27,27 @@ const Product = ( props ) => {
 							defaultImgUrl={DEFAULT_PRODUCT_HOME_IMG_URL}
 							altText={product?.image?.altText ?? product?.slug}
 						/> */}
-					{!isEmpty( product?.image ) ? (
-                                <Image
-                                    src={ product?.image?.sourceUrl }
-                                    alt="Image of resource website"
-                                    width= "308"
-                                    height="230"
-                                    {/*srcSet={ product?.image?.srcSet } */}
-                                />
-							) : null }
+						{!isEmpty(product?.image) ? (
+							<Image
+								src={product?.image?.sourceUrl}
+								alt="Image of resource website"
+								width="308"
+								height="230"
+							// {/*srcSet={ product?.image?.srcSet } */}
+							/>
+						) : null}
 
 					</a>
 				</Link>
 				<div className="product-info">
 					<h3 className="product-title mt-3 font-medium text-gray-800">
-						{ product.name ? product.name : '' }
+						{product.name ? product.name : ''}
 					</h3>
-					<div className="product-description text-sm text-gray-700" dangerouslySetInnerHTML={{ __html: (product?.description)}}/>
+					<div className="product-description text-sm text-gray-700" dangerouslySetInnerHTML={{ __html: (product?.description) }} />
 					{/* <Price salesPrice={product?.price} regularPrice={product?.regularPrice}/>
 					<AddToCartButton product={ product }/> */}
 
-					<AddToCollectionsBtn product ={product}/>
+					<AddToCollectionsBtn product={product} />
 				</div>
 
 			</div>
