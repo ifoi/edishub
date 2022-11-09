@@ -5,9 +5,7 @@ import {ADD_TO_CART} from "graphql/mutations/collection.mutations";
 import { useContext, useState } from "react";
 import { useQuery, useMutation } from "@apollo/client";
 
-import AddToCart from "./AddToCart"
-
-
+import {v4} from "uuid" ;
 
 const AddToCart = (props) => {
 
