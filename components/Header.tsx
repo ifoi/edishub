@@ -1,8 +1,10 @@
+import Image from "next/image";
 import Link from "next/link"
 import { useState } from "react";
 import { BiBell } from "react-icons/bi"
 import LoginModal from "./Login";
 import SignUpModal from "./signupScreens/SignUpModal";
+import logo from "/public/images/EdisHub_logo.png";
 
 function Header() {
   const [isLoggedIn, setisLoggedIn] = useState(false);
@@ -12,8 +14,15 @@ function Header() {
     <div className="container">
       <LoginModal show={show} setShow={setShow} />
       <header className="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 border-bottom">
-        <Link href='/'>
-          <a className="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">&#123; EdisHub &#125;</a>
+        <Link href='/' >
+          <div className="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+          <Image src={logo} 
+          alt="EdisHub logo" 
+          //</>width ="10rem" height= "2rem" 
+          // className="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none"
+           />
+          
+          </div>
         </Link>
 
         <nav className="navbar navbar-expand-lg">
