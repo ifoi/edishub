@@ -1,4 +1,4 @@
-import styled from "styled-components" ;
+import styled from "styled-components";
 
 export const RootWrapperExploreResourcesPage = styled.div`
 	min-height: 100vh;
@@ -390,15 +390,15 @@ export const OrViewAllDevelopmentResources = styled.span`
 	height: 36px;
 `;
 
-export const Vector = styled.svg`
-	width: 13px;
-	height: 8px;
-	position: absolute;
-	left: 494px;
-	top: 64px;
-	right: 1005px;
-	bottom: 910px;
-`;
+// export const Vector = styled.svg`
+// 	width: 13px;
+// 	height: 8px;
+// 	position: absolute;
+// 	left: 494px;
+// 	top: 64px;
+// 	right: 1005px;
+// 	bottom: 910px;
+// `;
 
 export const Vector_0001 = styled.svg`
 	width: 19px;
@@ -408,4 +408,191 @@ export const Vector_0001 = styled.svg`
 	top: 59px;
 	right: 946px;
 	bottom: 903px;
+`;
+
+export const RootWrapperCollectionItem = styled.div`
+height: 19rem;
+width: 25rem;
+position: relative;
+`;
+
+export const ResourceTitle = styled.span`
+color: black;
+text-overflow: ellipsis;
+font-size: 24px;
+font-family: Inter, sans-serif;
+font-weight: initial;
+text-align: left;
+min-height: 36px;
+position: absolute;
+left: 3px;
+top: 154px;
+right: 26px;
+bottom: 101px;
+margin-top: 6px
+`;
+
+export const ResourceWebsite = styled.span`
+color: rgb(167, 167, 167);
+text-overflow: ellipsis;
+font-size: 16px;
+font-family: Inter, sans-serif;
+font-weight: initial;
+text-align: left;
+min-height: 35px;
+position: absolute;
+left: 3px;
+top: 185px;
+right: 134px;
+bottom: 71px;
+`;
+
+export const ResourceDescription = styled.span`
+color: black;
+text-overflow: ellipsis;
+font-size: 16px;
+font-family: Inter, sans-serif;
+font-weight: initial;
+text-align: left;
+position: absolute;
+left: 3px;
+top: 220px;
+right: 0px;
+bottom: 33px;
+`;
+
+export const BookmarkToggle = styled.span`
+color: black;
+text-overflow: ellipsis;
+font-size: 14px;
+font-family: Inter, sans-serif;
+font-weight: initial;
+text-align: left;
+min-height: 16px;
+position: absolute;
+left: 253px;
+top: 269px;
+right: 0px;
+bottom: 6px;
+`;
+
+export const Comments = styled.span`
+color: black;
+text-overflow: ellipsis;
+font-size: 14px;
+font-family: Inter, sans-serif;
+font-weight: initial;
+text-align: left;
+min-height: 31px;
+position: absolute;
+left: 131px;
+top: 260px;
+right: 108px;
+bottom: 0px;
+`;
+
+export const CommentIcon = styled.div`
+overflow: hidden;
+position: absolute;
+left: 115px;
+top: 271px;
+right: 221px;
+bottom: 8px;
+`;
+
+export const Vector = styled.svg`
+width: 12px;
+height: 12px;
+position: absolute;
+left: 0px;
+top: 0px;
+right: 0px;
+bottom: 0px;
+`;
+
+export const Upvotes = styled.span`
+color: rgb(56, 95, 185);
+text-overflow: ellipsis;
+font-size: 14px;
+font-family: Inter, sans-serif;
+font-weight: initial;
+text-align: left;
+min-height: 16px;
+position: absolute;
+left: 15px;
+top: 268px;
+right: 231px;
+bottom: 7px;
+`;
+
+export const UpvoteIcon = styled.img`
+object-fit: cover;
+position: absolute;
+left: 0px;
+top: 269px;
+right: 334px;
+bottom: 8px;
+`;
+
+export const ResourceThumbnail = styled.div`
+width: 345px;
+height: 147px;
+position: absolute;
+left: 3px;
+top: 0px;
+`;
+
+export const ResourceThumbnailWrapper = styled.div`
+width: 25rem;
+height: 10rem;
+`
+
+export const ResourceImage = styled.img`
+object-fit: cover;
+width: 25rem;
+height: 10rem;
+`;
+
+export const Rectangle45 = styled.div`
+box-shadow: 3px -3px 4px  rgba(0, 0, 0, 0.25);
+background-color: white;
+position: absolute;
+left: 3px;
+top: 107px;
+right: 278px;
+bottom: 3px;
+`;
+
+export const ResourceDuration = styled.span`
+color: rgb(167, 167, 167);
+text-overflow: ellipsis;
+font-size: 14px;
+font-family: Inter, sans-serif;
+font-weight: initial;
+text-align: left;
+min-height: 18px;
+position: absolute;
+left: 10px;
+top: 117px;
+right: 284px;
+bottom: 12px;
+`;
+
+export const BiBookmarkFill = styled.div`
+overflow: hidden;
+position: absolute;
+left: 235px;
+top: 269px;
+right: 97px;
+bottom: 6px;
+`;
+
+export const BookmarkIcon = styled.svg`
+width: 12px;
+height: 16px;
+position: absolute;
+left: 2px;
+top: -0px;
+right: 2px;
+bottom: -0px;
 `;
