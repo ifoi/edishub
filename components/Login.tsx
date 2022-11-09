@@ -6,6 +6,7 @@ import { Modal } from 'react-bootstrap'
 import { LOGIN_USER } from 'graphql/mutations/user.mutations'
 import { GET_USER } from 'hooks/useAuth'
 import { useMutation } from '@apollo/client'
+import { useRouter } from 'next/router'
 
 interface Props {
   show: boolean
@@ -14,6 +15,8 @@ interface Props {
 
 function LoginModal(props: Props) {
   const { show, setShow } = props
+
+  const router = useRouter()
 
   const [logIn, { loading, error }] = useMutation(LOGIN_USER, {
     refetchQueries: [
@@ -38,11 +41,14 @@ function LoginModal(props: Props) {
     event.preventDefault()
     logIn({
       variables: {
-        login: userCredentials.username,
+        username: userCredentials.username,
         password: userCredentials.password
       }
     })
-      .then(resp => console.log(resp))
+      .then(resp => {
+        localStorage.setItem('token', resp.data.login.authToken)
+        router.push('/dashboard')
+      })
       .catch(err => console.log(err))
   }
 

@@ -9,7 +9,8 @@ import { client } from '../graphql/client';
 import Header from 'components/Header';
 import { useEffect } from 'react';
 import { FaustProvider } from '@faustjs/next';
-import {client as faustClient} from 'client' ;
+import { client as faustClient } from 'client';
+import { AuthProvider } from 'hooks/useAuth';
 
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -19,11 +20,12 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <FaustProvider client={faustClient} pageProps={pageProps}>
-      <ApolloProvider client={client}>
-
-        <Header />
-        <Component {...pageProps} />
-      </ApolloProvider>
+        <ApolloProvider client={client}>
+          <AuthProvider>
+            <Header />
+            <Component {...pageProps} />
+          </AuthProvider>
+        </ApolloProvider>
       </FaustProvider>
     </>
   );
