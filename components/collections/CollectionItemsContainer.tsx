@@ -109,9 +109,56 @@ const CollectionItemsContainer = () => {
         <div>
 
             <h3> Container for list of collections </h3>
+            
+			<div className="woo-next-cart-wrapper container">
+					<div className="cart-header grid grid-cols-2 gap-4">
+						<h1 className="text-2xl mb-5 uppercase">Collections</h1>
+						{/*Clear entire cart*/}
+						<div className="clear-cart text-right">
+							<button className="px-4 py-1 bg-gray-500 text-white rounded-sm w-auto" onClick={ ( event ) => handleClearCart( event ) } disabled={ clearCartProcessing }>
+								<span className="woo-next-cart">Clear Collections</span>
+								<i className="fa fa-arrow-alt-right"/>
+							</button>
+							{ clearCartProcessing ? <p>Clearing...</p> : '' }
+							{ updateCartProcessing ? <p>Updating...</p> : null }
+						</div>
+					</div>
 
-            <CollectionItem />
 
+			<div className="grid grid-cols-1 xl:grid-cols-4 gap-0 xl:gap-4 mb-5">
+						<table className="cart-products table-auto col-span-3 mb-5">
+								<thead className="text-left">
+								<tr className="woo-next-cart-head-container">
+									<th className="woo-next-cart-heading-el" scope="col"/>
+									<th className="woo-next-cart-heading-el" scope="col"/>
+									<th className="woo-next-cart-heading-el" scope="col">Resource </th>
+									<th className="woo-next-cart-heading-el" scope="col">Description</th>
+									<th className="woo-next-cart-heading-el" scope="col">Link to resource</th>
+									<th className="woo-next-cart-heading-el" scope="col"> More details</th>
+								</tr>
+								</thead>  
+								<tbody>
+									<CollectionItem />
+
+								{/* { cart.products.length && (
+									cart.products.map( item => (
+										<CollectionItem
+											key={ item.productId }
+											item={ item }
+											updateCartProcessing={ updateCartProcessing }
+											products={ cart.products }
+											handleRemoveProductClick={ handleRemoveProductClick }
+											updateCart={ updateCart }
+										/>
+									) )
+								) } */}
+
+		
+								</tbody>
+							 </table>
+	
+
+			</div>
         </div>
     )
 
