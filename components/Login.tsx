@@ -46,7 +46,8 @@ function LoginModal(props: Props) {
       }
     })
       .then(resp => {
-        localStorage.setItem('token', resp.data.login.authToken)
+        localStorage.setItem('token', resp.data.login.refreshToken)
+        console.log(router)
         router.push('/dashboard')
       })
       .catch(err => console.log(err))

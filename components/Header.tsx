@@ -1,3 +1,4 @@
+import useAuth from "hooks/useAuth";
 import Link from "next/link"
 import { useState } from "react";
 import { BiBell } from "react-icons/bi"
@@ -5,9 +6,9 @@ import LoginModal from "./Login";
 import SignUpModal from "./signupScreens/SignUpModal";
 
 function Header() {
-  const [isLoggedIn, setisLoggedIn] = useState(false);
+  const { loggedIn, user } = useAuth()
   const [show, setShow] = useState(false);
-
+  console.log(user)
   return (
     <div className="container">
       <LoginModal show={show} setShow={setShow} />
@@ -41,7 +42,7 @@ function Header() {
 
         <div className="col-md-3 text-end">
           <div className="dropdown text-end">
-            {!!isLoggedIn ? (<div className="row">
+            {!!loggedIn ? (<div className="row">
               <div className="col-md-6">
                 <div>Resource Hub
 
@@ -50,7 +51,7 @@ function Header() {
               </div>
               <div className="col-md-6">
                 <a href="#" className="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                  <Image src="https://github.com/mdo.png" alt="mdo" width="32" height="32" className="rounded-circle" />
+                  <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" className="rounded-circle" />
                 </a>
                 <ul className="dropdown-menu text-small">
                   <li><a className="dropdown-item" href="#">New project...</a></li>
