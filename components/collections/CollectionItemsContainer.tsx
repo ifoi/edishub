@@ -158,8 +158,10 @@ const CollectionItemsContainer = () => {
 							 </table>
 	
 
-			</div>
+			    </div>
         </div>
+
+	  </div>	
     )
 
 
