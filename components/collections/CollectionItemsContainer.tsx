@@ -113,17 +113,16 @@ const CollectionItemsContainer = () => {
 			{ cart ? (
 
 			<div className="woo-next-cart-wrapper container">
-					<div className="cart-header grid grid-cols-2 gap-4">
-						<h1 className="text-2xl mb-5 uppercase">Collections</h1>
-						{/*Clear entire cart*/}
-						<div className="clear-cart text-right">
-							<button className="px-4 py-1 bg-gray-500 text-white rounded-sm w-auto" onClick={ ( event ) => handleClearCart( event ) } disabled={ clearCartProcessing }>
-								<span className="woo-next-cart">Clear Collections</span>
-								<i className="fa fa-arrow-alt-right"/>
-							</button>
-							{ clearCartProcessing ? <p>Clearing...</p> : '' }
-							{ updateCartProcessing ? <p>Updating...</p> : null }
-						</div>
+				<div className="cart-header grid grid-cols-2 gap-4">
+					<h1 className="text-2xl mb-5 uppercase">Collections</h1>
+					{/*Clear entire cart*/}
+					<div className="clear-cart text-right">
+						<button className="px-4 py-1 bg-gray-500 text-white rounded-sm w-auto" onClick={(event) => handleClearCart(event)} disabled={clearCartProcessing}>
+							<span className="woo-next-cart">Clear Collections</span>
+							<i className="fa fa-arrow-alt-right" />
+						</button>
+						{clearCartProcessing ? <p>Clearing...</p> : ''}
+						{updateCartProcessing ? <p>Updating...</p> : null}
 					</div>
 
 					<div className="grid grid-cols-1 xl:grid-cols-4 gap-0 xl:gap-4 mb-5">
