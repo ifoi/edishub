@@ -13,8 +13,8 @@ Router.events.on("routeChangeError", () => NProgress.done());
 
 const Layout = (props) => {
   return (
-    <AppProvider>
-      <ApolloProvider client={client}>
+    <ApolloProvider client={client}>
+        <AppProvider>
         <div>
           <Head>
             <title>Edis Hub- your source for tech resources</title>
@@ -23,8 +23,8 @@ const Layout = (props) => {
           {props.children}
           {/* <Footer /> */}
         </div>
-      </ApolloProvider>
     </AppProvider>
+      </ApolloProvider>
   );
 };
 
