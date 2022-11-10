@@ -12,7 +12,7 @@ import { isEmpty } from 'lodash'
 const CollectionItemsContainer = () => {
 
 	const [cart, setCart] = useContext(AppContext);
-	console.log(useContext(AppContext))
+	// console.log(useContext(AppContext))
 	console.warn(cart);
 
 	const [requestError, setRequestError] = useState(null);
@@ -27,7 +27,7 @@ const CollectionItemsContainer = () => {
 			localStorage.setItem('woo-next-cart', JSON.stringify(updatedCart));
 
 			// Update cart data in React Context.
-			// setCart(updatedCart);
+			setCart(updatedCart);
 		}
 	});
 
@@ -108,8 +108,10 @@ const CollectionItemsContainer = () => {
 	return (
 		<div>
 
-            <h3> Container for list of collections </h3>
+            {/* <h2> Collections </h2> */}
             
+			{ cart ? (
+
 			<div className="woo-next-cart-wrapper container">
 					<div className="cart-header grid grid-cols-2 gap-4">
 						<h1 className="text-2xl mb-5 uppercase">Collections</h1>
@@ -124,8 +126,7 @@ const CollectionItemsContainer = () => {
 						</div>
 					</div>
 
-
-			<div className="grid grid-cols-1 xl:grid-cols-4 gap-0 xl:gap-4 mb-5">
+					<div className="grid grid-cols-1 xl:grid-cols-4 gap-0 xl:gap-4 mb-5">
 						<table className="cart-products table-auto col-span-3 mb-5">
 								<thead className="text-left">
 								<tr className="woo-next-cart-head-container">
@@ -140,31 +141,40 @@ const CollectionItemsContainer = () => {
 								<tbody>
 									<CollectionItem />
 
-								{/* { cart.products.length && (
+								 {/* { cart.products.length && (
 									cart.products.map( item => (
 										<CollectionItem
-											key={ item.productId }
+											key={ item.productId}
 											item={ item }
 											updateCartProcessing={ updateCartProcessing }
-											products={ cart.products }
+											products={ cart.products}
 											handleRemoveProductClick={ handleRemoveProductClick }
 											updateCart={ updateCart }
 										/>
-									) )
-								) } */}
-
+										) )
+									)  */}  
 		
 								</tbody>
-							 </table>
-	
+						</table>
+                	</div>
 
-			    </div>
-        </div>
+			</div>
+   
 
-	  </div>	
-    )
+			) : (
+				<div className="container mx-auto my-32 px-4 xl:px-0">
+					<h2 className="text-2xl mb-5">No items in you collection</h2>
+					<Link href="/">
+						<button className="bg-purple-600 text-white px-5 py-3 rounded-sm">
+							<span className="woo-next-cart-checkout-txt">Add New Resources</span>
+							<i className="fas fa-long-arrow-alt-right"/>
+						</button>
+					</Link>
+				</div>
+			) } 
 
-
+	</div>	
+	);
 };
 
 export default CollectionItemsContainer;
