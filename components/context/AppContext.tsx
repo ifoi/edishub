@@ -1,10 +1,9 @@
 import React, { createContext, useState, useEffect } from 'react';
-// export const AppContext = createContext(null);
-interface ObjType { }
-export const AppContext = createContext([
-	{},
-	() => { }
-]);
+export const AppContext = createContext([]); // changed the intial value for the context
+// export const AppContext = createContext([
+// 	{},
+// 	() => { }
+// ]);
 
 export const AppProvider = (props) => {
 
