@@ -162,7 +162,7 @@ const CollectionItemsContainer = () => {
 
 			) : (
 				<div className="container mx-auto my-32 px-4 xl:px-0">
-					<h2 className="text-2xl mb-5">No items in your collection</h2>
+					<h4 className="text-2xl mb-5">List is empty</h4>
 					<Link href="/">
 						<button className="bg-purple-600 text-white px-5 py-3 rounded-sm">
 							<span className="woo-next-cart-checkout-txt">Add New Resources</span>
