@@ -156,13 +156,13 @@ const CollectionItemsContainer = () => {
 								</tbody>
 						</table>
                 	</div>
-
+				</div>
 			</div>
    
 
 			) : (
 				<div className="container mx-auto my-32 px-4 xl:px-0">
-					<h2 className="text-2xl mb-5">No items in you collection</h2>
+					<h2 className="text-2xl mb-5">No items in your collection</h2>
 					<Link href="/">
 						<button className="bg-purple-600 text-white px-5 py-3 rounded-sm">
 							<span className="woo-next-cart-checkout-txt">Add New Resources</span>
@@ -173,7 +173,7 @@ const CollectionItemsContainer = () => {
 			) } 
 
 	</div>	
-	);
+	)
 };
 
 export default CollectionItemsContainer;
