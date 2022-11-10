@@ -15,15 +15,14 @@ const CollectionItem = ({
 
   // const [productCount, setProductCount] = useState(item.qty ) ;
 
+  // <tr className="woo-next-cart-item" key={ item.productId }>
 
-
-  // <tr key={ item.productId }>
-  //   <th>
-  //       <Button type='sm' > remove </Button>
-  //   </th>
-
-  //   </tr>
   return (
+      <tr className="woo-next-cart-item"  key={ 109 }>
+        {/* <th>
+            <Button type='sm' > remove </Button>
+        </th> */}
+    
     <RootWrapperCollectionItem>
       <ResourceTitle>
         Flexbox Froggy
@@ -65,6 +64,9 @@ const CollectionItem = ({
       </BiBookmarkFill>
     </RootWrapperCollectionItem>
 
+ 
+    </tr>
+  
   )
 };
 
