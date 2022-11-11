@@ -20,6 +20,7 @@ const Layout = (props) => {
             <title>Edis Hub- your source for tech resources</title>
           </Head>
           <Header />
+          
           {props.children}
           {/* <Footer /> */}
         </div>

@@ -48,6 +48,12 @@ function Jumbotron(props: Props) {
           <h1 className="display-5 fw-bold">Your <span className="special-text">Hub</span> to</h1>
           <h1 className="display-5 fw-bold">Tech Resources</h1>
           <p className="fs-4">The internet is an ocean full of resources. Let’s help you cast your net and find what’s right for you.</p>
+          
+          <h1> <span className="special-text">Want to be the first to know when we launch? </span>  </h1>
+          <Link href="/contact">
+            <a className="btn purple-btn btn-lg " type="button" rel="norefferer noopener"> Please click here, to fill out our contact form, so we can contact you</a>
+          </Link>
+          
           <Link href="/temp_resources">
             <a className="btn blue-btn btn-lg" type="button" rel="norefferer noopener">Explore Resources</a>
           </Link>
