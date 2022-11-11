@@ -138,9 +138,9 @@ const CollectionItemsContainer = () => {
 								</tr>
 								</thead>  
 								<tbody>
-									<CollectionItem />
+									{/* <CollectionItem /> */}
 
-								 {/* { cart.products.length && (
+								 { cart.products.length && (
 									cart.products.map( item => (
 										<CollectionItem
 											key={ item.productId}
@@ -151,7 +151,7 @@ const CollectionItemsContainer = () => {
 											updateCart={ updateCart }
 										/>
 										) )
-									)  */}  
+									) } 
 		
 								</tbody>
 						</table>

@@ -4,6 +4,7 @@ import { getUpdatedItems } from "functions";
 import Button from "react-bootstrap/Button";
 import styled from "styled-components";
 import { BiBookmarkFill, BookmarkIcon, BookmarkToggle, CommentIcon, Comments, Rectangle45, ResourceDescription, ResourceDuration, ResourceImage, ResourceThumbnail, ResourceThumbnailWrapper, ResourceTitle, ResourceWebsite, RootWrapperCollectionItem, UpvoteIcon, Upvotes, Vector } from "components/styles";
+import Link from "next/link";
 
 const CollectionItem = ({
   item,
@@ -18,17 +19,17 @@ const CollectionItem = ({
   // <tr className="woo-next-cart-item" key={ item.productId }>
 
   return (
-      <tr className="woo-next-cart-item"  key={ 109 }>
+      <tr className="woo-next-cart-item"  key={ item.productId }>
         {/* <th>
             <Button type='sm' > remove </Button>
         </th> */}
     
     <RootWrapperCollectionItem>
       <ResourceTitle>
-        Flexbox Froggy
+       { item.name }
       </ResourceTitle>
       <ResourceWebsite>
-        flexboxfroggy.com
+       <Link href = {item.externalUrl}> {item.externalUrl} </Link>
       </ResourceWebsite>
       <ResourceDescription>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod incididunt....
