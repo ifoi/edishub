@@ -1,2 +1,21 @@
 $theme-color: #385fb934;
 $special-text-color: #385FB9;
+
+// added from nextJs contact form https://raw.githubusercontent.com/philhawksworth/jamstack-comments-engine/master/src/scss/_variables.scss
+
+// Breakpoints
+$bp-narrow: "(min-width: 400px)";
+$bp-mid: "(min-width: 740px)";
+$bp-wide: "(min-width: 1200px)";
+
+// Colours
+$page-color: #222;
+$text-color: #eee;
+$accent-color: #c0ff11;
+$faint-accent-color: mix($accent-color, $page-color, 15%);
+$dull-accent-color: mix($accent-color, $page-color, 50%);
+
+//From   https://github.com/philhawksworth/jamstack-comments-engine/blob/master/src/scss/_mixins.scss
+
+//Mixins 
+
