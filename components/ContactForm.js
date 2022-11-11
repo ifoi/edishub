@@ -36,7 +36,7 @@ import {Form } from "react-bootstrap"
       //     state = { name: "", email: "", message: "" };
       //   }
 
-  const function ContactForm(props) {
+  const  ContactForm =(props) => {
         /* Here’s the juicy bit for posting the form submission */
 
      const handleSubmit = (e) => {
