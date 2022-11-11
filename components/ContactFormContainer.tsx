@@ -1,4 +1,4 @@
-import ContactForm from './ContactFormClass';
+import ContactForm from './ContactForm';
 
 
 const ContactFormContainer = () => {
