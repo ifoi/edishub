@@ -53,7 +53,8 @@
           fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: encode({ "form-name": "contact", ...this.state })
+            body: encode({ "form-name": "contact", ...this.state }),
+            
           })
             .then(() => alert("Success!"))
             .catch(error => alert(error));
@@ -66,7 +67,10 @@
         render() {
           const { name, email, message } = this.state;
           return (
-            <form onSubmit={this.handleSubmit}>
+            <form data-netlify="true" data-netlify-honeypot="bot-field" onSubmit={this.handleSubmit}>
+               {/* You still need to add the hidden input with the form name to your JSX form */}
+                <input type="hidden" name="form-name" value="contact" />
+              
               <p>
                 <label>
                   Your Name: <input type="text" name="name" value={name} onChange={this.handleChange} />
