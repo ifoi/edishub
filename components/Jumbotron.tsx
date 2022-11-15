@@ -51,7 +51,7 @@ function Jumbotron(props: Props) {
           
           <h1> <span className="special-text">Want to be the first to know when we launch? </span>  </h1>
           <Link href="/contact">
-            <a className="btn purple-btn btn-lg " type="button" rel="norefferer noopener"> Please click here, to fill out our contact form, so you can be one of the first </a>
+            <a className="btn purple-btn btn-lg " type="button" rel="norefferer noopener"> Please click here, to fill out our contact form, so we can contact you</a>
           </Link>
           
           <Link href="/temp_resources">
