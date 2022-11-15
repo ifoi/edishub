@@ -50,8 +50,8 @@ function Jumbotron(props: Props) {
           <p className="fs-4">The internet is an ocean full of resources. Let’s help you cast your net and find what’s right for you.</p>
           
           <h1> <span className="special-text">Want to be the first to know when we launch? </span>  </h1>
-          <Link href="/contact">
-            <a className="btn purple-btn btn-lg " type="button" rel="norefferer noopener"> Please click here, to fill out our contact form, so you can be one of the first </a>
+          <Link href="/waitlist">
+            <a className="btn purple-btn btn-lg " type="button" rel="norefferer noopener"> Please click here, to get on the waiting list, so you can be one of the first </a>
           </Link>
           
           <Link href="/temp_resources">
