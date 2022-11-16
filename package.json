@@ -27,6 +27,7 @@
     "react-dom": "18.2.0",
     "react-google-forms-hooks": "^1.2.4",
     "react-icons": "^4.6.0",
+    "react-youtube": "^10.0.0",
     "sass": "^1.55.0",
     "styled-components": "^5.3.6"
   },

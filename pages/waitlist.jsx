@@ -1,3 +1,8 @@
+import YouTube from "react-youtube";
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
 if (process.browser) {
     const url = new URL(window.location.href);
     const ref_id = url.searchParams.get('ref_id');
@@ -8,14 +13,29 @@ if (process.browser) {
     }
     
     export default function waitlist() {
-    
+
+        const opts = {
+            height: "390",
+            width: "640",
+            playerVars: {
+              autoplay: 1,
+            },
+          };
+        
+        const  _onReady =(event) => {
+            event.target.pauseVideo();
+          };
     
         return ( 
             <>
             <h2> Waiting List</h2> 
+            <Container> 
+
+            <Row>
+                <Col>
             <iframe 
                 id="waitlist_iframe"
-    
+                
                 title="waitlist" 
                 frameborder="0" 
                 marginheight="0" 
@@ -23,10 +43,17 @@ if (process.browser) {
                 width="600px"
                 height="600px"
                 src="https://getwaitlist.com/embed/4507"
-               /* style="border-radius: 8px;" */
-            >
+                /* style="border-radius: 8px;" */
+                >
             </iframe>
-            
+            </Col>
+           <Col> 
+                <YouTube videoId="9dgtIET5qx4" 
+                    opts={opts} onReady={_onReady} />   
+            </Col>
+
+             </Row>    
+            </Container>
             </>
         )
     }
