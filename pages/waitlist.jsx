@@ -15,8 +15,8 @@ if (process.browser) {
     export default function waitlist() {
 
         const opts = {
-            height: "390",
-            width: "640",
+            height: "292",
+            width: "480",
             playerVars: {
               autoplay: 1,
             },
@@ -32,6 +32,10 @@ if (process.browser) {
             <Container> 
 
             <Row>
+           <Col> 
+                <YouTube videoId="9dgtIET5qx4" 
+                    opts={opts} onReady={_onReady} />   
+            </Col>
                 <Col>
             <iframe 
                 id="waitlist_iframe"
@@ -46,10 +50,6 @@ if (process.browser) {
                 /* style="border-radius: 8px;" */
                 >
             </iframe>
-            </Col>
-           <Col> 
-                <YouTube videoId="9dgtIET5qx4" 
-                    opts={opts} onReady={_onReady} />   
             </Col>
 
              </Row>    
