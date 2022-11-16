@@ -15,8 +15,8 @@ if (process.browser) {
     export default function waitlist() {
 
         const opts = {
-            height: "292",
-            width: "480",
+            height: "312",
+            width: "512",
             playerVars: {
               autoplay: 1,
             },
